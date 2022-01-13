@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TempusApp: App {
+    static let shift = Shift()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(TempusApp.shift)
+//            timer()
         }
     }
 }

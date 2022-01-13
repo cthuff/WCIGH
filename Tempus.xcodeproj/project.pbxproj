@@ -13,8 +13,10 @@
 		440F27D0278FA153002622F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27BE278FA151002622F1 /* ContentView.swift */; };
 		440F27D1278FA153002622F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
 		440F27D2278FA153002622F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
-		440F27DC278FA1BB002622F1 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DB278FA1BB002622F1 /* Time.swift */; };
-		440F27DD278FA1BB002622F1 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DB278FA1BB002622F1 /* Time.swift */; };
+		440F27DF2790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
+		440F27E02790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
+		440F27E22790D264002622F1 /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27E12790D264002622F1 /* timer.swift */; };
+		440F27E32790D264002622F1 /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27E12790D264002622F1 /* timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +26,8 @@
 		440F27C4278FA153002622F1 /* Tempus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		440F27CA278FA153002622F1 /* Tempus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		440F27CC278FA153002622F1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		440F27DB278FA1BB002622F1 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		440F27DE2790C34C002622F1 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		440F27E12790D264002622F1 /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +62,8 @@
 			children = (
 				440F27BD278FA151002622F1 /* TempusApp.swift */,
 				440F27BE278FA151002622F1 /* ContentView.swift */,
-				440F27DB278FA1BB002622F1 /* Time.swift */,
+				440F27DE2790C34C002622F1 /* Shift.swift */,
+				440F27E12790D264002622F1 /* timer.swift */,
 				440F27BF278FA153002622F1 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -180,9 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440F27DC278FA1BB002622F1 /* Time.swift in Sources */,
 				440F27CF278FA153002622F1 /* ContentView.swift in Sources */,
+				440F27DF2790C34C002622F1 /* Shift.swift in Sources */,
 				440F27CD278FA153002622F1 /* TempusApp.swift in Sources */,
+				440F27E22790D264002622F1 /* timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440F27DD278FA1BB002622F1 /* Time.swift in Sources */,
 				440F27D0278FA153002622F1 /* ContentView.swift in Sources */,
+				440F27E02790C34C002622F1 /* Shift.swift in Sources */,
 				440F27CE278FA153002622F1 /* TempusApp.swift in Sources */,
+				440F27E32790D264002622F1 /* timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
