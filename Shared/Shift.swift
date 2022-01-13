@@ -36,13 +36,13 @@ final class Shift: ObservableObject {
         let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
         let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
 
-        let hours   = (time.hour ?? 0) - (today.hour ?? 0) //Int(time) / 3600
-        let minutes = (time.minute ?? 0) - (today.minute ?? 0) //Int(time) / 60 % 60
-        let seconds = (time.second ?? 0) - (today.second ?? 0) //Int(time) % 60
+        let hours   = (time.hour ?? 0) - (today.hour ?? 0)
+        let minutes = (time.minute ?? 0) - (today.minute ?? 0)
+        let seconds = (time.second ?? 0) - (today.second ?? 0)
 
         timeRemaining = hours * 3600 + minutes * 60 + seconds
-//        return "\(timeRemaining)"
-        return String(format:"%02i:%02i:%02i", hours - 1, minutes >= 0 ? minutes - 1: minutes + 59, seconds > 0 ? seconds : seconds + 60)
+        
+        return String(format:"%02i:%02i:%02i", hours, minutes >= 0 ? minutes - 1: minutes + 59, seconds > 0 ? seconds : seconds + 60)
     }
 
 }

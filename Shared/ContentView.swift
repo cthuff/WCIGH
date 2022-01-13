@@ -11,7 +11,7 @@ struct ContentView: View {
 
     @EnvironmentObject var shift: Shift
     
-    @State private var timeRemaining = 100
+    @State private var timeRemaining = 3600
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -55,31 +55,28 @@ struct ContentView: View {
             .padding(.top, 25)
             HStack{
                 Text("Time Remaining:")
-                Text(shift.remaining())
+                Text("\(timeString(timeRemaining))")
                     .foregroundColor(.orange)
+                    .onChange(of: shift.remaining()) { _ in
+                        timeRemaining = shift.timeRemaining}
             }
             .padding(.top, 25)
             .font(.title2)
             }
         .onReceive(timer) { time in
-            if shift.timeRemaining > 0 {
-                shift.timeRemaining -= 1
+            if timeRemaining > 0 {
+                timeRemaining -= 1
             }
         }
     }
     
-//    func remaining() -> String {
-//
-//        let time = Calendar.current.dateComponents([.hour, .minute, .second], from: shift.endTime)
-//        let now = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
-//        let hours   = (time.hour ?? 0) - (now.hour ?? 0) //Int(time) / 3600
-//        let minutes = (time.minute ?? 0) - (now.minute ?? 0) //Int(time) / 60 % 60
-//        let seconds = (time.second ?? 0) - (now.second ?? 0) //Int(time) % 60
-//
-//        timeRemaining = hours * 3600 + minutes * 60 + seconds
-////        return "\(timeRemaining)"
-//        return String(format:"%02i:%02i:%02i", hours, minutes > 0 ? minutes : minutes + 60, seconds > 0 ? seconds : seconds + 60)
-//    }
+    func timeString(_ time: Int) -> String {
+        let hours   = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+        
+    }
     
 }
 
