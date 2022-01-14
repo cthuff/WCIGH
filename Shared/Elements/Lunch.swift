@@ -13,14 +13,14 @@ struct Lunch: View {
     @State private var showPicker = true
     
     var body: some View {
-        Picker(selection: $lunchPicker, label: Text("Lunch Options")) {
+        Picker(selection: $lunchPicker, label: Text("Lunch Options") .bold()) {
             Text("Minutes").tag(1)
             Text("Clock").tag(2)
         }
         .padding(.horizontal, 50)
         .padding(.bottom, 5)
         .pickerStyle(.segmented)
-    
+        .frame(maxWidth: 450)
         .onChange(of: lunchPicker){ _ in
             withAnimation(Animation.easeInOut(duration: 0.25)) {
                 switch lunchPicker {

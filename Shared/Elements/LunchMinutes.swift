@@ -14,9 +14,10 @@ struct LunchMinutes: View {
             Text("How long was lunch?")
             TextField("time", text: $shift.lunchLength)
                 .frame(width: 40)
-                .foregroundColor(.green)
                 .padding(.leading)
-                .keyboardType(.numberPad)
+                #if os(iOS)
+                    .keyboardType(.numberPad)
+                #endif
                 
             Text("minutes")
         }

@@ -21,7 +21,6 @@ struct ContentView: View {
             Lunch()
             ShiftLength()
             ClockOut()
-            
             HStack{
                 Text("Time Remaining:")
                 Text("\(timeString(timeRemaining))")
@@ -32,10 +31,13 @@ struct ContentView: View {
             .padding(.top, 25)
             .font(.title2)
             }
+        .padding(.vertical, 50)
+        .frame(minWidth: 350, maxWidth: 550)
         .onReceive(timer) { time in
             if timeRemaining > 0 {
                 timeRemaining -= 1
             }
+            
         }
     }
     
