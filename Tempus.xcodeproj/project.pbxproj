@@ -67,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				440F27BC278FA151002622F1 /* Shared */,
+				448FE0972791FEA100CD9127 /* MacOS Menu Bar */,
 				440F27CB278FA153002622F1 /* macOS */,
 				440F27C5278FA153002622F1 /* Products */,
 			);
@@ -120,6 +121,13 @@
 				44BCED5E2790F03800EB1D17 /* ClockOut.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		448FE0972791FEA100CD9127 /* MacOS Menu Bar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "MacOS Menu Bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
