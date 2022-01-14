@@ -13,7 +13,6 @@ struct TempusApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(TempusApp.shift)
-//            timer()
         }
     }
 }
