@@ -11,7 +11,7 @@ import Combine
 final class Shift: ObservableObject {
     
     @Published var start = Calendar.current.date(from: DateComponents(hour: 8))!
-    @Published var lunchLength = ""
+    @Published var lunchLength = "30"
     @Published var workLength = ""
     var endTime = Date()
     var timeRemaining = 3600

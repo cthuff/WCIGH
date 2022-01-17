@@ -14,12 +14,13 @@ struct ShiftLength: View {
         HStack{
             Text("How long is your shift?")
             
-            TextField("time", text: $shift.workLength)
+            TextField("8", text: $shift.workLength)
                 .frame(width: 40)
                 .padding(.leading)
-            #if os(iOS)
-                .keyboardType(.numberPad)
-            #endif
+                #if os(iOS)
+                .keyboardType(.numbersAndPunctuation)
+                .submitLabel(.done)
+                #endif
             
             Text("hours")
         }

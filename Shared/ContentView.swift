@@ -24,7 +24,7 @@ struct ContentView: View {
             HStack{
                 Text("Time Remaining:")
                 Text("\(timeString(timeRemaining))")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.cyan)
                     .onChange(of: shift.remaining()) { _ in
                         timeRemaining = shift.timeRemaining}
             }

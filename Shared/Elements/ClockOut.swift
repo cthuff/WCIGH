@@ -14,7 +14,7 @@ struct ClockOut: View {
             Text("Clock Out At:")
                 .bold()
             Text(shift.clockOut(), format: .dateTime.minute().hour())
-                .foregroundColor(.mint)
+                .foregroundColor(.purple)
         }
         .font(.title2)
         .padding(.top, 25)
