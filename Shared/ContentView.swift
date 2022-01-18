@@ -28,10 +28,25 @@ struct ContentView: View {
                     .onChange(of: shift.remaining()) { _ in
                         timeRemaining = shift.timeRemaining}
             }
-            .padding(.top, 25)
+            .padding(.top, 15)
             .font(.title2)
+            #if os(macOS)
+            Button(action: {
+                NSApplication.shared.terminate(self)
+            })
+            {
+                Text("Quit App")
+                .font(.caption)
+                .fontWeight(.semibold)
             }
-        .padding(.vertical, 50)
+            .padding(.top, 10)
+            .padding(.bottom)
+            .padding(.trailing, 30)
+            .frame(width: 360.0, alignment: .trailing)
+            #endif
+            }
+        .padding(.top, 50)
+        
         .frame(minWidth: 350, maxWidth: 550)
         .onReceive(timer) { time in
             if timeRemaining > 0 {
