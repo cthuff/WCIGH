@@ -6,21 +6,17 @@
 //
 
 import Foundation
-import Combine
+
+import SwiftUI
 
 final class Shift: ObservableObject {
     
     @Published var start = Calendar.current.date(from: DateComponents(hour: 8))!
-    @Published var lunchLength = ""
-    @Published var workLength = ""
-    var endTime = Date()
-    var timeRemaining = 3600
-    var info = Info()
+    @AppStorage("lunchLength") var lunchLength = ""
+    @AppStorage("workLength") var workLength = ""
     
-    struct Info {
-        
-        var today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
-    }
+    var endTime = Date()
+    var timeRemaining = 36000
 
     func clockOut() -> Date {
         
