@@ -12,47 +12,49 @@ struct ContentView: View {
     @EnvironmentObject var shift: Shift
     
     @State private var timeRemaining = 3600
+    @State private var showPrefs = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack{
-            ClockIn()
-            Lunch()
-            ShiftLength()
-            ClockOut()
-            HStack{
-                Text("Time Remaining:")
-                Text("\(timeString(timeRemaining))")
-                    .foregroundColor(.cyan)
-                    .onChange(of: shift.remaining()) { _ in
-                        timeRemaining = shift.timeRemaining}
+            Button(action: {showPrefs.toggle()}){
+                Image(systemName: "gearshape.fill")
             }
             .padding(.top, 15)
-            .font(.title2)
-            #if os(macOS)
-            Button(action: {
-                NSApplication.shared.terminate(self)
-            })
-            {
-                Text("Quit App")
-                .font(.caption)
-                .fontWeight(.semibold)
-            }
-            .padding(.top, 10)
             .padding(.bottom)
-            .padding(.trailing, 30)
-            .frame(width: 360.0, alignment: .trailing)
-            #endif
+            .padding(.trailing, 15)
+            .frame(width: 350.0, alignment: .trailing)
+            if(showPrefs == false){
+                ClockIn()
+                Lunch()
+                ShiftLength()
+                ClockOut()
+                HStack{
+                    Text("Time Remaining:")
+                    Text("\(timeString(timeRemaining))")
+                        .foregroundColor(.cyan)
+                        .onChange(of: shift.remaining()) { _ in
+                            timeRemaining = shift.timeRemaining}
+                }
+                .padding(.top, 15)
+                .font(.title2)
+            } else {
+                PreferencesView()
+                Button(action: {showPrefs.toggle()}){
+                    Text("Done")
+                        .padding()
+                }
+                .padding(.top, 10)
             }
-        .padding(.top, 50)
-        
+            #if os(macOS)
+            QuitButton()
+            #endif
+        }
         .frame(minWidth: 350, maxWidth: 550)
         .onReceive(timer) { time in
-            if timeRemaining > 0 {
                 timeRemaining -= 1
-            }
-            
+
         }
     }
     
