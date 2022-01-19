@@ -17,6 +17,7 @@
 		440F27E02790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44128ACC279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
 		44128ACD279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
+		4469188A2798B71C001B40EF /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44734FDD27976BB200260EE7 /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44734FDB27976B8F00260EE7 /* QuitButton.swift */; };
 		448FE08C2791E04000CD9127 /* ShiftLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */; };
 		448FE08D2791E04000CD9127 /* ClockOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5E2790F03800EB1D17 /* ClockOut.swift */; };
@@ -24,6 +25,11 @@
 		448FE08F2791E04000CD9127 /* LunchBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED602790F0C000EB1D17 /* LunchBlocks.swift */; };
 		448FE0902791E04000CD9127 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED622790FAB600EB1D17 /* Lunch.swift */; };
 		448FE0912791E04000CD9127 /* ClockIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED582790EEDF00EB1D17 /* ClockIn.swift */; };
+		44A88622279894820070DF30 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C52798808B00A3F5A7 /* WidgetKit.framework */; platformFilter = maccatalyst; };
+		44A88623279894820070DF30 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C72798808B00A3F5A7 /* SwiftUI.framework */; platformFilter = maccatalyst; };
+		44A88626279894820070DF30 /* Widgit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A88625279894820070DF30 /* Widgit.swift */; };
+		44A88628279894830070DF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A88627279894830070DF30 /* Assets.xcassets */; };
+		44A8862C279894830070DF30 /* WidgitExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44A88621279894820070DF30 /* WidgitExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		44BCED592790EEDF00EB1D17 /* ClockIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED582790EEDF00EB1D17 /* ClockIn.swift */; };
 		44BCED5B2790EF4500EB1D17 /* LunchMinutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5A2790EF4500EB1D17 /* LunchMinutes.swift */; };
 		44BCED5D2790EF9C00EB1D17 /* ShiftLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */; };
@@ -31,6 +37,30 @@
 		44BCED612790F0C000EB1D17 /* LunchBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED602790F0C000EB1D17 /* LunchBlocks.swift */; };
 		44BCED632790FAB600EB1D17 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED622790FAB600EB1D17 /* Lunch.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44A8862A279894830070DF30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 440F27B8278FA151002622F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44A88620279894820070DF30;
+			remoteInfo = WidgitExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4461F1D52798808D00A3F5A7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				44A8862C279894830070DF30 /* WidgitExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		440F27BD278FA151002622F1 /* TempusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempusApp.swift; sourceTree = "<group>"; };
@@ -41,7 +71,13 @@
 		440F27CC278FA153002622F1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		440F27DE2790C34C002622F1 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		44128ACB279792A600CE9A57 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		4461F1C52798808B00A3F5A7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4461F1C72798808B00A3F5A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		44734FDB27976B8F00260EE7 /* QuitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButton.swift; sourceTree = "<group>"; };
+		44A88621279894820070DF30 /* WidgitExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgitExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A88625279894820070DF30 /* Widgit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgit.swift; sourceTree = "<group>"; };
+		44A88627279894830070DF30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44A88629279894830070DF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44BCED582790EEDF00EB1D17 /* ClockIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockIn.swift; sourceTree = "<group>"; };
 		44BCED5A2790EF4500EB1D17 /* LunchMinutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchMinutes.swift; sourceTree = "<group>"; };
 		44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLength.swift; sourceTree = "<group>"; };
@@ -65,6 +101,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44A8861E279894820070DF30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44A88623279894820070DF30 /* SwiftUI.framework in Frameworks */,
+				44A88622279894820070DF30 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +119,8 @@
 				440F27BC278FA151002622F1 /* Shared */,
 				448FE0972791FEA100CD9127 /* MacOS Menu Bar */,
 				440F27CB278FA153002622F1 /* macOS */,
+				44A88624279894820070DF30 /* Widgit */,
+				4461F1C42798808B00A3F5A7 /* Frameworks */,
 				440F27C5278FA153002622F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +143,7 @@
 			children = (
 				440F27C4278FA153002622F1 /* Tempus.app */,
 				440F27CA278FA153002622F1 /* Tempus.app */,
+				44A88621279894820070DF30 /* WidgitExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +154,15 @@
 				440F27CC278FA153002622F1 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		4461F1C42798808B00A3F5A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4461F1C52798808B00A3F5A7 /* WidgetKit.framework */,
+				4461F1C72798808B00A3F5A7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		448FE0922791E55900CD9127 /* Model */ = {
@@ -137,6 +194,16 @@
 			path = "MacOS Menu Bar";
 			sourceTree = "<group>";
 		};
+		44A88624279894820070DF30 /* Widgit */ = {
+			isa = PBXGroup;
+			children = (
+				44A88625279894820070DF30 /* Widgit.swift */,
+				44A88627279894830070DF30 /* Assets.xcassets */,
+				44A88629279894830070DF30 /* Info.plist */,
+			);
+			path = Widgit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,10 +214,12 @@
 				440F27C0278FA153002622F1 /* Sources */,
 				440F27C1278FA153002622F1 /* Frameworks */,
 				440F27C2278FA153002622F1 /* Resources */,
+				4461F1D52798808D00A3F5A7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				44A8862B279894830070DF30 /* PBXTargetDependency */,
 			);
 			name = "Tempus (iOS)";
 			productName = "Tempus (iOS)";
@@ -174,6 +243,23 @@
 			productReference = 440F27CA278FA153002622F1 /* Tempus.app */;
 			productType = "com.apple.product-type.application";
 		};
+		44A88620279894820070DF30 /* WidgitExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44A8862D279894830070DF30 /* Build configuration list for PBXNativeTarget "WidgitExtension" */;
+			buildPhases = (
+				44A8861D279894820070DF30 /* Sources */,
+				44A8861E279894820070DF30 /* Frameworks */,
+				44A8861F279894820070DF30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgitExtension;
+			productName = WidgitExtension;
+			productReference = 44A88621279894820070DF30 /* WidgitExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +279,9 @@
 					440F27C9278FA153002622F1 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					44A88620279894820070DF30 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 440F27BB278FA151002622F1 /* Build configuration list for PBXProject "Tempus" */;
@@ -210,6 +299,7 @@
 			targets = (
 				440F27C3278FA153002622F1 /* Tempus (iOS) */,
 				440F27C9278FA153002622F1 /* Tempus (macOS) */,
+				44A88620279894820070DF30 /* WidgitExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +318,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				440F27D2278FA153002622F1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44A8861F279894820070DF30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44A88628279894830070DF30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +367,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44A8861D279894820070DF30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4469188A2798B71C001B40EF /* Shift.swift in Sources */,
+				44A88626279894820070DF30 /* Widgit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44A8862B279894830070DF30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44A88620279894820070DF30 /* WidgitExtension */;
+			targetProxy = 44A8862A279894830070DF30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		440F27D3278FA153002622F1 /* Debug */ = {
@@ -390,6 +505,7 @@
 		440F27D6278FA153002622F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +536,7 @@
 		440F27D7278FA153002622F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +625,65 @@
 			};
 			name = Release;
 		};
+		44A8862E279894830070DF30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK5UZ58Q86;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgit;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus.Widgit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44A8862F279894830070DF30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK5UZ58Q86;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgit;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus.Widgit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -534,6 +710,15 @@
 			buildConfigurations = (
 				440F27D9278FA153002622F1 /* Debug */,
 				440F27DA278FA153002622F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44A8862D279894830070DF30 /* Build configuration list for PBXNativeTarget "WidgitExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44A8862E279894830070DF30 /* Debug */,
+				44A8862F279894830070DF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
