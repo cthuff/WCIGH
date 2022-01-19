@@ -16,7 +16,7 @@ final class Shift: ObservableObject {
     @AppStorage("workLength") var workLength = ""
     
     var endTime = Date()
-    var timeRemaining = 36000
+    var timeRemaining = 3600
 
     func clockOut() -> Date {
         
