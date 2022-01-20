@@ -19,6 +19,12 @@
 		44128ACD279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
 		4418BAF62798E2CF00B5C3D6 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
 		4418BB022799CC7400B5C3D6 /* Tempus--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4418BB012799CC7300B5C3D6 /* Tempus--iOS--Info.plist */; };
+		4418BB082799D01800B5C3D6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C52798808B00A3F5A7 /* WidgetKit.framework */; platformFilter = maccatalyst; };
+		4418BB092799D01800B5C3D6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C72798808B00A3F5A7 /* SwiftUI.framework */; platformFilter = maccatalyst; };
+		4418BB0C2799D01800B5C3D6 /* macOSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418BB0B2799D01800B5C3D6 /* macOSWidget.swift */; };
+		4418BB0E2799D01A00B5C3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4418BB0D2799D01A00B5C3D6 /* Assets.xcassets */; };
+		4418BB132799D01A00B5C3D6 /* macOSWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4418BB072799D01800B5C3D6 /* macOSWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4418BB182799D04D00B5C3D6 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		4469188A2798B71C001B40EF /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44734FDD27976BB200260EE7 /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44734FDB27976B8F00260EE7 /* QuitButton.swift */; };
 		448FE08C2791E04000CD9127 /* ShiftLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */; };
@@ -41,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4418BB112799D01A00B5C3D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 440F27B8278FA151002622F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4418BB062799D01800B5C3D6;
+			remoteInfo = macOSWidgetExtension;
+		};
 		44A8862A279894830070DF30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 440F27B8278FA151002622F1 /* Project object */;
@@ -51,6 +64,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4418BB172799D01A00B5C3D6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4418BB132799D01A00B5C3D6 /* macOSWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4461F1D52798808D00A3F5A7 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +100,11 @@
 		4418BAFF2799CB8900B5C3D6 /* Tempus (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tempus (iOS).entitlements"; sourceTree = "<group>"; };
 		4418BB002799CBBD00B5C3D6 /* WidgitExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgitExtension.entitlements; sourceTree = "<group>"; };
 		4418BB012799CC7300B5C3D6 /* Tempus--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tempus--iOS--Info.plist"; sourceTree = "<group>"; };
+		4418BB072799D01800B5C3D6 /* macOSWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = macOSWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4418BB0B2799D01800B5C3D6 /* macOSWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSWidget.swift; sourceTree = "<group>"; };
+		4418BB0D2799D01A00B5C3D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4418BB0F2799D01A00B5C3D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4418BB102799D01A00B5C3D6 /* macOSWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOSWidget.entitlements; sourceTree = "<group>"; };
 		4461F1C52798808B00A3F5A7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4461F1C72798808B00A3F5A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		44734FDB27976B8F00260EE7 /* QuitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButton.swift; sourceTree = "<group>"; };
@@ -106,6 +135,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4418BB042799D01800B5C3D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4418BB092799D01800B5C3D6 /* SwiftUI.framework in Frameworks */,
+				4418BB082799D01800B5C3D6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44A8861E279894820070DF30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +166,7 @@
 				448FE0972791FEA100CD9127 /* MacOS Menu Bar */,
 				440F27CB278FA153002622F1 /* macOS */,
 				44A88624279894820070DF30 /* Widgit */,
+				4418BB0A2799D01800B5C3D6 /* macOSWidget */,
 				4461F1C42798808B00A3F5A7 /* Frameworks */,
 				440F27C5278FA153002622F1 /* Products */,
 			);
@@ -152,6 +191,7 @@
 				440F27C4278FA153002622F1 /* Tempus.app */,
 				440F27CA278FA153002622F1 /* Tempus.app */,
 				44A88621279894820070DF30 /* WidgitExtension.appex */,
+				4418BB072799D01800B5C3D6 /* macOSWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +202,17 @@
 				440F27CC278FA153002622F1 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		4418BB0A2799D01800B5C3D6 /* macOSWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4418BB0B2799D01800B5C3D6 /* macOSWidget.swift */,
+				4418BB0D2799D01A00B5C3D6 /* Assets.xcassets */,
+				4418BB0F2799D01A00B5C3D6 /* Info.plist */,
+				4418BB102799D01A00B5C3D6 /* macOSWidget.entitlements */,
+			);
+			path = macOSWidget;
 			sourceTree = "<group>";
 		};
 		4461F1C42798808B00A3F5A7 /* Frameworks */ = {
@@ -241,15 +292,34 @@
 				440F27C6278FA153002622F1 /* Sources */,
 				440F27C7278FA153002622F1 /* Frameworks */,
 				440F27C8278FA153002622F1 /* Resources */,
+				4418BB172799D01A00B5C3D6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4418BB122799D01A00B5C3D6 /* PBXTargetDependency */,
 			);
 			name = "Tempus (macOS)";
 			productName = "Tempus (macOS)";
 			productReference = 440F27CA278FA153002622F1 /* Tempus.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4418BB062799D01800B5C3D6 /* macOSWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4418BB142799D01A00B5C3D6 /* Build configuration list for PBXNativeTarget "macOSWidgetExtension" */;
+			buildPhases = (
+				4418BB032799D01800B5C3D6 /* Sources */,
+				4418BB042799D01800B5C3D6 /* Frameworks */,
+				4418BB052799D01800B5C3D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macOSWidgetExtension;
+			productName = macOSWidgetExtension;
+			productReference = 4418BB072799D01800B5C3D6 /* macOSWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		44A88620279894820070DF30 /* WidgitExtension */ = {
 			isa = PBXNativeTarget;
@@ -287,6 +357,9 @@
 					440F27C9278FA153002622F1 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					4418BB062799D01800B5C3D6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					44A88620279894820070DF30 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -308,6 +381,7 @@
 				440F27C3278FA153002622F1 /* Tempus (iOS) */,
 				440F27C9278FA153002622F1 /* Tempus (macOS) */,
 				44A88620279894820070DF30 /* WidgitExtension */,
+				4418BB062799D01800B5C3D6 /* macOSWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +401,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				440F27D2278FA153002622F1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4418BB052799D01800B5C3D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4418BB0E2799D01A00B5C3D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +458,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4418BB032799D01800B5C3D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4418BB182799D04D00B5C3D6 /* Shift.swift in Sources */,
+				4418BB0C2799D01800B5C3D6 /* macOSWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44A8861D279894820070DF30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,6 +480,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4418BB122799D01A00B5C3D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4418BB062799D01800B5C3D6 /* macOSWidgetExtension */;
+			targetProxy = 4418BB112799D01A00B5C3D6 /* PBXContainerItemProxy */;
+		};
 		44A8862B279894830070DF30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 44A88620279894820070DF30 /* WidgitExtension */;
@@ -582,6 +678,7 @@
 		440F27D9278FA153002622F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
@@ -612,6 +709,7 @@
 		440F27DA278FA153002622F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
@@ -634,6 +732,68 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus;
 				PRODUCT_NAME = Tempus;
 				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4418BB152799D01A00B5C3D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = macOSWidget/macOSWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK5UZ58Q86;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macOSWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = macOSWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus.macOSWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4418BB162799D01A00B5C3D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = macOSWidget/macOSWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK5UZ58Q86;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macOSWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = macOSWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus.macOSWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -726,6 +886,15 @@
 			buildConfigurations = (
 				440F27D9278FA153002622F1 /* Debug */,
 				440F27DA278FA153002622F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4418BB142799D01A00B5C3D6 /* Build configuration list for PBXNativeTarget "macOSWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4418BB152799D01A00B5C3D6 /* Debug */,
+				4418BB162799D01A00B5C3D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
