@@ -12,8 +12,8 @@ import SwiftUI
 final class Shift: ObservableObject {
     
     @Published var start = Calendar.current.date(from: DateComponents(hour: 8))!
-    @AppStorage("lunchLength") var lunchLength = ""
-    @AppStorage("workLength") var workLength = ""
+    @AppStorage("lunchLength", store: UserDefaults(suiteName: "group.com.craighuff.Tempus")) var lunchLength = ""
+    @AppStorage("workLength", store: UserDefaults(suiteName: "group.com.craighuff.Tempus")) var workLength = ""
     
     var endTime = Date()
     var timeRemaining = 3600

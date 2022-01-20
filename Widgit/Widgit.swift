@@ -22,8 +22,6 @@ struct Provider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let entries: [SimpleEntry] = [SimpleEntry(date: Date(), shift: shift)]
-
-
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -36,15 +34,17 @@ struct SimpleEntry: TimelineEntry {
 
 struct WidgitEntryView : View {
     var entry: Provider.Entry
-    @State var timeRemaining = timeString(lunchLength: "30", shiftLength: "8")
+//    @State var timeRemaining = timeString(lunchLength: "30", shiftLength: "8")
     
     var body: some View {
         VStack(){
             Text("Shift Remaining:")
-            Text(Date.now.advanced(by: Double(timeRemaining)), style: .timer)
+            Text(Date.now.advanced(by: Double(timeString(lunchLength: entry.shift.lunchLength, shiftLength: entry.shift.workLength))), style: .timer)
                 .font(.system(.title))
                 .foregroundColor(.cyan)
                 .multilineTextAlignment(.center)
+                .padding(.top, 1)
+            
         }
     }
 }
@@ -57,7 +57,7 @@ struct Widgit: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgitEntryView(entry: entry)
         }
-        .configurationDisplayName("Clockout Widgit")
+        .configurationDisplayName("Clockout Widget")
         .description("Keep an eye on when you can clock out")
     }
 }
@@ -66,7 +66,7 @@ struct Widgit_Previews: PreviewProvider {
     static let shift = Shift()
     static var previews: some View {
         WidgitEntryView(entry: SimpleEntry(date: Date(), shift: shift))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
 
@@ -82,6 +82,8 @@ func timeString(lunchLength: String, shiftLength: String) -> Int {
     let hours   = (time.hour ?? 0) - (today.hour ?? 0)
     let minutes = (time.minute ?? 0) - (today.minute ?? 0)
     let seconds = (time.second ?? 0) - (today.second ?? 0)
+    
+    print((hours * 3600 + minutes * 60 + seconds))
     
     return (hours * 3600 + minutes * 60 + seconds)
     
