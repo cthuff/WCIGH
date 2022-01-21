@@ -26,7 +26,6 @@ struct ShiftLength: View {
                     }
                 }
                 #endif
-            
             Text("hours")
         }
         .font(.title3)

@@ -34,12 +34,11 @@ struct SimpleEntry: TimelineEntry {
 
 struct WidgitEntryView : View {
     var entry: Provider.Entry
-//    @State var timeRemaining = timeString(lunchLength: "30", shiftLength: "8")
     
     var body: some View {
         VStack(){
             Text("Shift Remaining:")
-            Text(Date.now.advanced(by: Double(timeString(lunchLength: entry.shift.lunchLength, shiftLength: entry.shift.workLength))), style: .timer)
+            Text(Date.now.advanced(by: Double(timeString(shift: entry.shift))), style: .timer)
                 .font(.system(.title))
                 .foregroundColor(.cyan)
                 .multilineTextAlignment(.center)
@@ -67,22 +66,26 @@ struct Widgit_Previews: PreviewProvider {
     static var previews: some View {
         WidgitEntryView(entry: SimpleEntry(date: Date(), shift: shift))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .environmentObject(shift)
     }
 }
 
-func timeString(lunchLength: String, shiftLength: String) -> Int {
-    
-    let lunchTime = (Double(lunchLength) ?? 30) * 60
-    let shiftTime = (Double(shiftLength) ?? 8) * 60 * 60
+//func timeString(lunchLength: String, shiftLength: String) -> Int {
+func timeString(shift: Shift) -> Int {
+    let lunchTime = (Double(shift.lunchLength) ?? 30) * 60
+    let shiftTime = (Double(shift.workLength) ?? 8) * 60 * 60
     let endTime = Calendar.current.date(from: DateComponents(hour: 8))!.advanced(by: lunchTime + shiftTime)
+    
+    print("Shift End Time: \(shift.endTime)")
+    print("End Time: \(endTime)")
     
     let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
     let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
-    
+
     let hours   = (time.hour ?? 0) - (today.hour ?? 0)
     let minutes = (time.minute ?? 0) - (today.minute ?? 0)
     let seconds = (time.second ?? 0) - (today.second ?? 0)
-    
+
     return (hours * 3600 + minutes * 60 + seconds)
-    
+
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
 
@@ -35,7 +36,9 @@ struct ContentView: View {
                     Text("\(timeString(timeRemaining))")
                         .foregroundColor(.cyan)
                         .onChange(of: shift.remaining()) { _ in
-                            timeRemaining = shift.timeRemaining}
+                            timeRemaining = shift.timeRemaining
+                            WidgetCenter.shared.reloadAllTimelines()
+                        }
                 }
                 .padding(.top, 15)
                 .font(.title2)
@@ -51,7 +54,7 @@ struct ContentView: View {
             QuitButton()
             #endif
         }
-        .frame(minWidth: 350, maxWidth: 550)
+        .frame(minWidth: 350, maxWidth: 450)
         .onReceive(timer) { time in
                 timeRemaining -= 1
 
@@ -63,9 +66,7 @@ struct ContentView: View {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-        
     }
-    
 }
 
 

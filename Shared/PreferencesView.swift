@@ -36,6 +36,7 @@ struct PreferencesView: View {
                 Text("hours")
             }
         }
+        .padding(.horizontal, 5)
         #if os(iOS)
         .keyboardType(.numberPad)
         #endif

@@ -30,9 +30,8 @@ struct Lunch: View {
                     default:
                         showPicker ? showPicker.toggle() : nil
                     }
-                                }
+                }
             }
-            
             if (showPicker){
                 LunchMinutes()
             }
