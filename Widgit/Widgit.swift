@@ -83,8 +83,6 @@ func timeString(lunchLength: String, shiftLength: String) -> Int {
     let minutes = (time.minute ?? 0) - (today.minute ?? 0)
     let seconds = (time.second ?? 0) - (today.second ?? 0)
     
-    print((hours * 3600 + minutes * 60 + seconds))
-    
     return (hours * 3600 + minutes * 60 + seconds)
     
 }

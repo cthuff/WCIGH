@@ -42,7 +42,7 @@ struct ContentView: View {
             } else {
                 PreferencesView()
                 Button(action: {showPrefs.toggle()}){
-                    Text("Done")
+                    Text("Save")
                         .padding()
                 }
                 .padding(.top, 10)

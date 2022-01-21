@@ -17,8 +17,6 @@
 		440F27E02790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44128ACC279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
 		44128ACD279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
-		4418BAF62798E2CF00B5C3D6 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
-		4418BB022799CC7400B5C3D6 /* Tempus--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4418BB012799CC7300B5C3D6 /* Tempus--iOS--Info.plist */; };
 		4418BB082799D01800B5C3D6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C52798808B00A3F5A7 /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		4418BB092799D01800B5C3D6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C72798808B00A3F5A7 /* SwiftUI.framework */; platformFilter = maccatalyst; };
 		4418BB0C2799D01800B5C3D6 /* macOSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418BB0B2799D01800B5C3D6 /* macOSWidget.swift */; };
@@ -97,8 +95,6 @@
 		440F27CC278FA153002622F1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		440F27DE2790C34C002622F1 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		44128ACB279792A600CE9A57 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
-		4418BAFF2799CB8900B5C3D6 /* Tempus (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tempus (iOS).entitlements"; sourceTree = "<group>"; };
-		4418BB002799CBBD00B5C3D6 /* WidgitExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgitExtension.entitlements; sourceTree = "<group>"; };
 		4418BB012799CC7300B5C3D6 /* Tempus--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tempus--iOS--Info.plist"; sourceTree = "<group>"; };
 		4418BB072799D01800B5C3D6 /* macOSWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = macOSWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4418BB0B2799D01800B5C3D6 /* macOSWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSWidget.swift; sourceTree = "<group>"; };
@@ -172,7 +168,6 @@
 		440F27BC278FA151002622F1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4418BAFF2799CB8900B5C3D6 /* Tempus (iOS).entitlements */,
 				440F27BF278FA153002622F1 /* Assets.xcassets */,
 				440F27BD278FA151002622F1 /* TempusApp.swift */,
 				440F27BE278FA151002622F1 /* ContentView.swift */,
@@ -250,7 +245,6 @@
 				44A88625279894820070DF30 /* Widgit.swift */,
 				44A88627279894830070DF30 /* Assets.xcassets */,
 				44A88629279894830070DF30 /* Info.plist */,
-				4418BB002799CBBD00B5C3D6 /* WidgitExtension.entitlements */,
 			);
 			path = Widgit;
 			sourceTree = "<group>";
@@ -383,7 +377,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4418BB022799CC7400B5C3D6 /* Tempus--iOS--Info.plist in Resources */,
 				440F27D1278FA153002622F1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4469188A2798B71C001B40EF /* Shift.swift in Sources */,
-				4418BAF62798E2CF00B5C3D6 /* PreferencesView.swift in Sources */,
 				44A88626279894820070DF30 /* Widgit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,6 +23,16 @@ struct PreferencesView: View {
                 TextField("0", text: $shift.workLength)
                     .frame(width: 40)
                     .padding(.leading)
+                #if os(iOS)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                hideKeyboard()
+                            }
+                        }
+                    }
+                #endif
                 Text("hours")
             }
         }

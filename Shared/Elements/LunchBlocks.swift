@@ -29,7 +29,7 @@ struct LunchBlocks: View {
             }
         }.onChange(of: lunchEnd) { _ in
             
-            shift.lunchLength = "\(lunchStart.distance(to: lunchEnd) / 60)"
+            shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
         }
     }
 }
