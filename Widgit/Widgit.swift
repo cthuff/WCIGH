@@ -22,7 +22,7 @@ struct Provider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let entries: [SimpleEntry] = [SimpleEntry(date: Date(), shift: shift)]
-        let timeline = Timeline(entries: entries, policy: .after(Date.now.advanced(by: 10)))
+        let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
 }
@@ -83,5 +83,4 @@ func timeString(shift: Shift) -> Date {
     let tempTime = (hours * 3600 + minutes * 60 + seconds)
     
     return Date().advanced(by: Double(tempTime))
-
 }

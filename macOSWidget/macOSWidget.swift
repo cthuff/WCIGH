@@ -5,6 +5,8 @@
 //  Created by Craig on 1/20/22.
 //
 
+//This doesn't work properly with updaing when the information changes. Since a menu bar app is alwasy active, it doesn't use the same logic that is present in ContentView's scenePhase. Until this gets sorted out, this will not be bundled in with the app
+
 import WidgetKit
 import SwiftUI
 
@@ -38,12 +40,11 @@ struct macOSWidgetEntryView : View {
     var body: some View {
         VStack(){
             Text("Shift Remaining:")
-            Text(Date.now.advanced(by: Double(timeString(lunchLength: entry.shift.lunchLength, shiftLength: entry.shift.workLength))), style: .timer)
+            Text(timeString(shift: entry.shift), style: .timer)
                 .font(.system(.title))
                 .foregroundColor(.cyan)
                 .multilineTextAlignment(.center)
                 .padding(.top, 1)
-            
         }
     }
 }
@@ -69,20 +70,21 @@ struct macOSWidget_Previews: PreviewProvider {
     }
 }
 
-func timeString(lunchLength: String, shiftLength: String) -> Int {
-    
-    let lunchTime = (Double(lunchLength) ?? 30) * 60
-    let shiftTime = (Double(shiftLength) ?? 8) * 60 * 60
-    let endTime = Calendar.current.date(from: DateComponents(hour: 8))!.advanced(by: lunchTime + shiftTime)
+//Does the math that is contained in shift.ClockOut and shift.Remaining, but uses local variables to allow for updaing when the data changes
+func timeString(shift: Shift) -> Date {
+    let lunchTime = (Double(shift.lunchLength) ?? 30) * 60
+    let shiftTime = (Double(shift.workLength) ?? 8) * 3600
+    let endTime = Calendar.current.date(from: DateComponents(hour: 0, minute: 0, second: 0))!.advanced(by: lunchTime + shiftTime + Double(shift.startTime))
     
     let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
     let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
-    
+
     let hours   = (time.hour ?? 0) - (today.hour ?? 0)
     let minutes = (time.minute ?? 0) - (today.minute ?? 0)
     let seconds = (time.second ?? 0) - (today.second ?? 0)
+
+    let tempTime = (hours * 3600 + minutes * 60 + seconds)
     
-    return (hours * 3600 + minutes * 60 + seconds)
-    
+    return Date().advanced(by: Double(tempTime))
 }
 

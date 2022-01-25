@@ -66,7 +66,7 @@ struct ContentView: View {
         .onReceive(timer) { time in
             timeRemaining -= 1
         }
-        //Update the widget when the app is being closed out. Prevents unecessary backgoud updates.
+        //Update the widget when the app is being closed out on iOS. Prevents unecessary background updates.
         //Note: There is a slight delay in the update and the Widget loading the data that looks a little funky, but doesn't effect usability
         .onChange(of: scenePhase) { newPhase in
             if newPhase == .background {

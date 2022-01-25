@@ -11,8 +11,6 @@
 		440F27CE278FA153002622F1 /* TempusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27BD278FA151002622F1 /* TempusApp.swift */; };
 		440F27CF278FA153002622F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27BE278FA151002622F1 /* ContentView.swift */; };
 		440F27D0278FA153002622F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27BE278FA151002622F1 /* ContentView.swift */; };
-		440F27D1278FA153002622F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
-		440F27D2278FA153002622F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
 		440F27DF2790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		440F27E02790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44128ACC279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
@@ -21,7 +19,6 @@
 		4418BB092799D01800B5C3D6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C72798808B00A3F5A7 /* SwiftUI.framework */; platformFilter = maccatalyst; };
 		4418BB0C2799D01800B5C3D6 /* macOSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418BB0B2799D01800B5C3D6 /* macOSWidget.swift */; };
 		4418BB0E2799D01A00B5C3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4418BB0D2799D01A00B5C3D6 /* Assets.xcassets */; };
-		4418BB132799D01A00B5C3D6 /* macOSWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4418BB072799D01800B5C3D6 /* macOSWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4418BB182799D04D00B5C3D6 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		4469188A2798B71C001B40EF /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44734FDD27976BB200260EE7 /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44734FDB27976B8F00260EE7 /* QuitButton.swift */; };
@@ -31,6 +28,8 @@
 		448FE08F2791E04000CD9127 /* LunchBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED602790F0C000EB1D17 /* LunchBlocks.swift */; };
 		448FE0902791E04000CD9127 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED622790FAB600EB1D17 /* Lunch.swift */; };
 		448FE0912791E04000CD9127 /* ClockIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED582790EEDF00EB1D17 /* ClockIn.swift */; };
+		44A1D51327A08AF5003BB79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
+		44A1D51427A08AF9003BB79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
 		44A88622279894820070DF30 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C52798808B00A3F5A7 /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		44A88623279894820070DF30 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C72798808B00A3F5A7 /* SwiftUI.framework */; platformFilter = maccatalyst; };
 		44A88626279894820070DF30 /* Widgit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A88625279894820070DF30 /* Widgit.swift */; };
@@ -45,13 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4418BB112799D01A00B5C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 440F27B8278FA151002622F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4418BB062799D01800B5C3D6;
-			remoteInfo = macOSWidgetExtension;
-		};
 		44A8862A279894830070DF30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 440F27B8278FA151002622F1 /* Project object */;
@@ -62,17 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4418BB172799D01A00B5C3D6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				4418BB132799D01A00B5C3D6 /* macOSWidgetExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4461F1D52798808D00A3F5A7 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,12 +259,10 @@
 				440F27C6278FA153002622F1 /* Sources */,
 				440F27C7278FA153002622F1 /* Frameworks */,
 				440F27C8278FA153002622F1 /* Resources */,
-				4418BB172799D01A00B5C3D6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4418BB122799D01A00B5C3D6 /* PBXTargetDependency */,
 			);
 			name = "Tempus (macOS)";
 			productName = "Tempus (macOS)";
@@ -377,7 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440F27D1278FA153002622F1 /* Assets.xcassets in Resources */,
+				44A1D51427A08AF9003BB79D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440F27D2278FA153002622F1 /* Assets.xcassets in Resources */,
+				44A1D51327A08AF5003BB79D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,11 +443,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4418BB122799D01A00B5C3D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4418BB062799D01800B5C3D6 /* macOSWidgetExtension */;
-			targetProxy = 4418BB112799D01A00B5C3D6 /* PBXContainerItemProxy */;
-		};
 		44A8862B279894830070DF30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 44A88620279894820070DF30 /* WidgitExtension */;
@@ -615,8 +589,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -648,8 +622,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -662,10 +636,10 @@
 		440F27D9278FA153002622F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "macOS App Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -682,8 +656,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -693,10 +668,10 @@
 		440F27DA278FA153002622F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "macOS App Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -713,8 +688,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -803,7 +779,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus.Widgit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sports.TempusWidgit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -833,7 +809,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.Tempus.Widgit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sports.TempusWidgit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
