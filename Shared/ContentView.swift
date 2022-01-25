@@ -37,7 +37,6 @@ struct ContentView: View {
                         .foregroundColor(.cyan)
                         .onChange(of: shift.remaining()) { _ in
                             timeRemaining = shift.timeRemaining
-                            WidgetCenter.shared.reloadAllTimelines()
                         }
                 }
                 .padding(.top, 15)
@@ -54,6 +53,7 @@ struct ContentView: View {
             QuitButton()
             #endif
         }
+        .onAppear(perform: {shift.startTime = 28800})
         .frame(minWidth: 350, maxWidth: 450)
         .onReceive(timer) { time in
                 timeRemaining -= 1
@@ -62,6 +62,7 @@ struct ContentView: View {
     }
     
     func timeString(_ time: Int) -> String {
+        
         let hours   = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60

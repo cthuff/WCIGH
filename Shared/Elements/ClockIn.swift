@@ -17,6 +17,10 @@ struct ClockIn: View {
                 .font(.title3)
             DatePicker("", selection: $shift.start, displayedComponents: [.hourAndMinute])
                 .frame(width: 90)
+                .onChange(of: shift.start) {_ in
+                    let tempStart = Calendar.current.dateComponents([.hour, .minute], from: shift.start)
+                    shift.startTime = ((tempStart.hour ?? 8) * 60 * 60) + ((tempStart.minute ?? 0 ) * 60)
+                }
         }
     }
 }

@@ -38,23 +38,22 @@ struct WidgitEntryView : View {
     var body: some View {
         VStack(){
             Text("Shift Remaining:")
-            Text(Date.now.advanced(by: Double(timeString(shift: entry.shift))), style: .timer)
+            Text(timeString(shift: entry.shift), style: .timer)
                 .font(.system(.title))
                 .foregroundColor(.cyan)
                 .multilineTextAlignment(.center)
                 .padding(.top, 1)
-            
         }
     }
 }
 
 @main
 struct Widgit: Widget {
-    let kind: String = "Widgit"
-
+    let kind: String = "Widget"
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgitEntryView(entry: entry)
+                
         }
         .configurationDisplayName("Clockout Widget")
         .description("Keep an eye on when you can clock out")
@@ -66,18 +65,14 @@ struct Widgit_Previews: PreviewProvider {
     static var previews: some View {
         WidgitEntryView(entry: SimpleEntry(date: Date(), shift: shift))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-            .environmentObject(shift)
     }
 }
 
-//func timeString(lunchLength: String, shiftLength: String) -> Int {
-func timeString(shift: Shift) -> Int {
+func timeString(shift: Shift) -> Date {
     let lunchTime = (Double(shift.lunchLength) ?? 30) * 60
-    let shiftTime = (Double(shift.workLength) ?? 8) * 60 * 60
-    let endTime = Calendar.current.date(from: DateComponents(hour: 8))!.advanced(by: lunchTime + shiftTime)
-    
-    print("Shift End Time: \(shift.endTime)")
-    print("End Time: \(endTime)")
+    let shiftTime = (Double(shift.workLength) ?? 8) * 3600
+//    let endTime = shift.start.advanced(by: lunchTime + shiftTime)
+    let endTime = Calendar.current.date(from: DateComponents(hour: 0, minute: 0, second: 0))!.advanced(by: lunchTime + shiftTime + Double(shift.startTime))
     
     let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
     let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
@@ -86,6 +81,8 @@ func timeString(shift: Shift) -> Int {
     let minutes = (time.minute ?? 0) - (today.minute ?? 0)
     let seconds = (time.second ?? 0) - (today.second ?? 0)
 
-    return (hours * 3600 + minutes * 60 + seconds)
+    let tempTime = (hours * 3600 + minutes * 60 + seconds)
+    
+    return shift.endTime.advanced(by: Double(tempTime))
 
 }

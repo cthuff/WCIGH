@@ -6,12 +6,12 @@
 //
 
 import Foundation
-
 import SwiftUI
 
 final class Shift: ObservableObject {
     
     @Published var start = Calendar.current.date(from: DateComponents(hour: 8))!
+    @AppStorage("startTime", store: UserDefaults(suiteName: "group.com.craighuff.Tempus")) var startTime = 28800
     @AppStorage("lunchLength", store: UserDefaults(suiteName: "group.com.craighuff.Tempus")) var lunchLength = ""
     @AppStorage("workLength", store: UserDefaults(suiteName: "group.com.craighuff.Tempus")) var workLength = ""
     
