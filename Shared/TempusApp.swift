@@ -21,6 +21,8 @@ struct TempusApp: App {
 
 }
 #if os(macOS)
+//This allows the application to run as a macOS Menu Bar App
+//Handles everything to load the view 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem?

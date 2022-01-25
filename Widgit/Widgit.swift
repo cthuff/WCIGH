@@ -16,8 +16,8 @@ struct Provider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-//        let entry = SimpleEntry(date: Date(), shift: shift)
-//        completion(entry)
+        let entry = SimpleEntry(date: Date(), shift: shift)
+        completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
@@ -53,7 +53,6 @@ struct Widgit: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgitEntryView(entry: entry)
-                
         }
         .configurationDisplayName("Clockout Widget")
         .description("Keep an eye on when you can clock out")
@@ -68,6 +67,7 @@ struct Widgit_Previews: PreviewProvider {
     }
 }
 
+//Does the math that is contained in shift.ClockOut and shift.Remaining, but uses local variables to allow for updaing when the data changes
 func timeString(shift: Shift) -> Date {
     let lunchTime = (Double(shift.lunchLength) ?? 30) * 60
     let shiftTime = (Double(shift.workLength) ?? 8) * 3600

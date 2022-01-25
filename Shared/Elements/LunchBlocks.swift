@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Element that allows the user to choose their lunch start and end time using two clocks
 struct LunchBlocks: View {
     @EnvironmentObject var shift: Shift
     
@@ -27,6 +28,7 @@ struct LunchBlocks: View {
                 DatePicker("", selection: $lunchEnd, displayedComponents: [.hourAndMinute])
                     .frame(width: 90)
             }
+        //Watches both lunch values in case the user doesn't edit one or the other
         }.onChange(of: lunchEnd) { _ in
             shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
         }

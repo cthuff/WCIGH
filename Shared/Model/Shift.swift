@@ -18,6 +18,7 @@ final class Shift: ObservableObject {
     var endTime = Date()
     var timeRemaining = 3600
 
+    //Calculates the time to end the shift by adding the lunch and shift length to the start time
     func clockOut() -> Date {
         
         let lunchTime = (Double(lunchLength) ?? 30) * 60
@@ -27,6 +28,8 @@ final class Shift: ObservableObject {
         return endTime
     }
     
+    //Returns the amount of seconds that are remaining when Current time is subtracted from the end of the shift
+    //This return a variable so it can be called in and .onChange function in ContentView
     func remaining() -> Int {
 
         let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)

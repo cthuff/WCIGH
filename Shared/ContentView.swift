@@ -19,13 +19,16 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            Button(action: {showPrefs.toggle()}){
+            //Places the gear button at the top of the application.
+            //When this button is pressed, toggle between this View and PreferencesView
+            Button(action: {withAnimation(Animation.easeInOut(duration: 0.25)) {showPrefs.toggle()}}){
                 Image(systemName: "gearshape.fill")
             }
             .padding(.top, 15)
             .padding(.bottom)
             .padding(.trailing, 15)
             .frame(width: 350.0, alignment: .trailing)
+            //Loads the main content of the application
             if(showPrefs == false){
                 ClockIn()
                 Lunch()
@@ -35,6 +38,7 @@ struct ContentView: View {
                     Text("Time Remaining:")
                     Text("\(timeString(timeRemaining))")
                         .foregroundColor(.cyan)
+                    //Since shift.remaining returns a value, each time it changes, we want the timeRemaining to match that value 
                         .onChange(of: shift.remaining()) { _ in
                             timeRemaining = shift.timeRemaining
                         }
@@ -42,29 +46,35 @@ struct ContentView: View {
                 .padding(.top, 15)
                 .font(.title2)
             } else {
+                //Loads the Preferences for the Application
                 PreferencesView()
-                Button(action: {showPrefs.toggle()}){
+                //When this button is pressed, return to the main View above
+                Button(action: {withAnimation(Animation.easeInOut(duration: 0.25)) {showPrefs.toggle()}}){
                     Text("Save")
                         .padding()
                 }
                 .padding(.top, 10)
             }
             #if os(macOS)
+            //Since the Applicaiton doesn't exist in the dock, a quit button will be loaded at the bottom so the user can close it at any time
             QuitButton()
             #endif
         }
+        //After the app is loaded, reset the saved start time so the widget will update to a new start time when it changes
         .onAppear(perform: {shift.startTime = 28800})
         .frame(minWidth: 350, maxWidth: 450)
         .onReceive(timer) { time in
             timeRemaining -= 1
         }
+        //Update the widget when the app is being closed out. Prevents unecessary backgoud updates.
+        //Note: There is a slight delay in the update and the Widget loading the data that looks a little funky, but doesn't effect usability
         .onChange(of: scenePhase) { newPhase in
             if newPhase == .background {
                 WidgetCenter.shared.reloadAllTimelines()
             }
         }
     }
-    
+    //Accepts an integer of time in seconds that will be convereted into a time string that is displayed in the text field
     func timeString(_ time: Int) -> String {
         
         let hours   = Int(time) / 3600
@@ -86,6 +96,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 #if canImport(UIKit)
+//When the "done" button is pressed on the Keyboard Toolbar, this dismisses the keyboard
 extension View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

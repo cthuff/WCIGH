@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Element that allows the user to input their lunch length as text in minutes
 struct LunchMinutes: View {
     @EnvironmentObject var shift: Shift
     var body: some View {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Allows the users to set their default lunch and shift length and loads a separate view from Content View
 struct PreferencesView: View {
     @EnvironmentObject var shift: Shift
     var body: some View {
@@ -23,6 +24,7 @@ struct PreferencesView: View {
                 TextField("0", text: $shift.workLength)
                     .frame(width: 40)
                     .padding(.leading)
+                //Loads the "Done" button in the toolbar for this view in iOS only
                 #if os(iOS)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {

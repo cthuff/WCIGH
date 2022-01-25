@@ -12,6 +12,8 @@ struct Lunch: View {
     @State private var lunchPicker = 1
     @State private var showPicker = true
     
+    //Loads the View that allows the user to input their lunch in a minute format or using 2 clocks for start and end of lunch
+    //Shifts based on which selection is active in the picker view
     var body: some View {
         VStack{
             Picker(selection: $lunchPicker, label: Text("Lunch Options") .bold()) {

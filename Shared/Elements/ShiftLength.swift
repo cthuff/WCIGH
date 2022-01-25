@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Element to allow the user to adjust the length of their normal shift length
 struct ShiftLength: View {
     @EnvironmentObject var shift: Shift
     var body: some View {
@@ -18,6 +19,7 @@ struct ShiftLength: View {
                 #if os(iOS)
                 .keyboardType(.numberPad)
                 .toolbar {
+                    //This will load the toolbar for every keyboard in the view when this is present. If there is no ShiftLength Object in the view, then the toolbar will need to be added 
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
                         Button("Done") {

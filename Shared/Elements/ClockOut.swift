@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Element to load the information informing the user when to ClockOut 
 struct ClockOut: View {
     @EnvironmentObject var shift: Shift
     var body: some View {
