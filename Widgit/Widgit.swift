@@ -16,13 +16,13 @@ struct Provider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), shift: shift)
-        completion(entry)
+//        let entry = SimpleEntry(date: Date(), shift: shift)
+//        completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let entries: [SimpleEntry] = [SimpleEntry(date: Date(), shift: shift)]
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .after(Date.now.advanced(by: 10)))
         completion(timeline)
     }
 }
@@ -71,7 +71,6 @@ struct Widgit_Previews: PreviewProvider {
 func timeString(shift: Shift) -> Date {
     let lunchTime = (Double(shift.lunchLength) ?? 30) * 60
     let shiftTime = (Double(shift.workLength) ?? 8) * 3600
-//    let endTime = shift.start.advanced(by: lunchTime + shiftTime)
     let endTime = Calendar.current.date(from: DateComponents(hour: 0, minute: 0, second: 0))!.advanced(by: lunchTime + shiftTime + Double(shift.startTime))
     
     let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
@@ -83,6 +82,6 @@ func timeString(shift: Shift) -> Date {
 
     let tempTime = (hours * 3600 + minutes * 60 + seconds)
     
-    return shift.endTime.advanced(by: Double(tempTime))
+    return Date().advanced(by: Double(tempTime))
 
 }

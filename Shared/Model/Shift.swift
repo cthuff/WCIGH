@@ -27,7 +27,7 @@ final class Shift: ObservableObject {
         return endTime
     }
     
-    func remaining() -> String {
+    func remaining() -> Int {
 
         let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
         let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
@@ -37,8 +37,7 @@ final class Shift: ObservableObject {
         let seconds = (time.second ?? 0) - (today.second ?? 0)
 
         timeRemaining = hours * 3600 + minutes * 60 + seconds
-        
-        return String(format:"%02i:%02i:%02i", hours, minutes >= 0 ? minutes - 1: minutes + 59, seconds > 0 ? seconds : seconds + 60)
+        return timeRemaining
     }
 
 }

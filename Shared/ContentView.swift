@@ -9,7 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct ContentView: View {
-
+    @Environment(\.scenePhase) var scenePhase
     @EnvironmentObject var shift: Shift
     
     @State private var timeRemaining = 3600
@@ -56,8 +56,12 @@ struct ContentView: View {
         .onAppear(perform: {shift.startTime = 28800})
         .frame(minWidth: 350, maxWidth: 450)
         .onReceive(timer) { time in
-                timeRemaining -= 1
-
+            timeRemaining -= 1
+        }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .background {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
     }
     
