@@ -38,7 +38,7 @@ struct WidgitEntryView : View {
     var body: some View {
         VStack(){
             Text("Shift Remaining:")
-            Text(timeString(shift: entry.shift), style: .timer)
+            Text(entry.shift.timeString(), style: .timer)
                 .font(.system(.title))
                 .foregroundColor(.cyan)
                 .multilineTextAlignment(.center)
@@ -65,22 +65,4 @@ struct Widgit_Previews: PreviewProvider {
         WidgitEntryView(entry: SimpleEntry(date: Date(), shift: shift))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
-}
-
-//Does the math that is contained in shift.ClockOut and shift.Remaining, but uses local variables to allow for updaing when the data changes
-func timeString(shift: Shift) -> Date {
-    let lunchTime = (Double(shift.lunchLength) ?? 30) * 60
-    let shiftTime = (Double(shift.workLength) ?? 8) * 3600
-    let endTime = Calendar.current.date(from: DateComponents(hour: 0, minute: 0, second: 0))!.advanced(by: lunchTime + shiftTime + Double(shift.startTime))
-    
-    let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
-    let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
-
-    let hours   = (time.hour ?? 0) - (today.hour ?? 0)
-    let minutes = (time.minute ?? 0) - (today.minute ?? 0)
-    let seconds = (time.second ?? 0) - (today.second ?? 0)
-
-    let tempTime = (hours * 3600 + minutes * 60 + seconds)
-    
-    return Date().advanced(by: Double(tempTime))
 }

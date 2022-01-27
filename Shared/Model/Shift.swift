@@ -5,7 +5,6 @@
 //  Created by Craig on 1/13/22.
 //
 
-import Foundation
 import SwiftUI
 
 final class Shift: ObservableObject {
@@ -22,7 +21,7 @@ final class Shift: ObservableObject {
     func clockOut() -> Date {
         
         let lunchTime = (Double(lunchLength) ?? 30) * 60
-        let shiftTime = (Double(workLength) ?? 8) * 60 * 60
+        let shiftTime = (Double(workLength) ?? 8) * 3600
         
         endTime = start.advanced(by: lunchTime + shiftTime)
         return endTime
@@ -43,5 +42,25 @@ final class Shift: ObservableObject {
         return timeRemaining
     }
 
+    //Does the math that is contained in shift.ClockOut and shift.Remaining, but uses local variables to allow for updaing when the data changes
+    //Used for the Widget and the Watch App
+    //The Math is the same as above but necessary since the views on the widget and the watch app don't change
+    func timeString() -> Date {
+        let lunchTime = (Double(lunchLength) ?? 30) * 60
+        let shiftTime = (Double(workLength) ?? 8) * 3600
+        let endTime = Calendar.current.date(from: DateComponents(hour: 0, minute: 0, second: 0))!.advanced(by: lunchTime + shiftTime + Double(startTime))
+        
+        let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
+        let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
+
+        let hours   = (time.hour ?? 0) - (today.hour ?? 0)
+        let minutes = (time.minute ?? 0) - (today.minute ?? 0)
+        let seconds = (time.second ?? 0) - (today.second ?? 0)
+
+        let tempTime = (hours * 3600 + minutes * 60 + seconds)
+        
+        return Date().advanced(by: Double(tempTime))
+    }
+    
 }
 
