@@ -16,14 +16,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            Text("Shift remaining")
-                .font(.title3)
+            Text("\(shift.sharedShift)")
             ProgressView(value: timeRemaining)
                 .progressViewStyle(CircularProgressViewStyle(tint: .purple  ))
-                .scaleEffect(x: 1.75, y: 1.75, anchor: .center)
-                .frame(width: 87, height: 87, alignment: .center)
+                .scaleEffect(x: 1.5, y: 1.5, anchor: .center)
+                .frame(width: 70, height: 70, alignment: .center)
                 .onReceive(timer) { time in
-                    if timeRemaining > 0.1 {
+                    if timeRemaining > fraction / 2 {
                     timeRemaining -= fraction
                     }
                 }
@@ -34,8 +33,14 @@ struct ContentView: View {
                 .foregroundColor(.cyan)
                 .multilineTextAlignment(.center)
         }
+        .onReceive(shift.$sharedShift){ _ in
+            fraction = 1 / Double(shift.sharedShift)
+            print("lunch length: \(shift.lunchLength)")
+            timeRemaining = fraction * shift.endTime.distance(to: shift.timeString())
+            
+        }
         .onAppear(perform: {
-            let totalTime = ((Double(shift.workLength) ?? 8) * 3600 + (Double(shift.lunchLength) ?? 30)  * 60)
+            let totalTime = Double(shift.sharedShift) //((Double(shift.workLength) ?? 8) * 3600 + (Double(shift.lunchLength) ?? 30)  * 60)
             fraction = 1 / totalTime
             timeRemaining = fraction * shift.endTime.distance(to: shift.timeString())
         })

@@ -17,6 +17,9 @@ struct ShiftLength: View {
                 .frame(width: 40)
                 .padding(.leading)
                 #if os(iOS)
+                .onChange(of: shift.workLength){ _ in
+                    shift.sendToWatch()
+                }
                 .keyboardType(.numberPad)
                 .toolbar {
                     //This will load the toolbar for every keyboard in the view when this is present. If there is no ShiftLength Object in the view, then the toolbar will need to be added 

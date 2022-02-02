@@ -5,6 +5,11 @@
 //  Created by Craig on 1/13/22.
 //
 
+import Foundation
+import Combine
+#if !os(macOS)
+import WatchConnectivity
+#endif
 import SwiftUI
 
 final class Shift: ObservableObject {
@@ -16,12 +21,46 @@ final class Shift: ObservableObject {
     
     var endTime = Date()
     var timeRemaining = 3600
+    
+    
 
+#if !os(macOS)
+    var session: WCSession
+    let delegate: WCSessionDelegate
+    let subject = PassthroughSubject<Int, Never>()
+    
+    @Published private(set) var sharedShift = 28800
+    
+    //Inits the session between the phone and the watch
+    //Could possible look to limit this if a device doesn't have a paired watch
+    init(session: WCSession = .default) {
+        self.delegate = SessionDelegater(countSubject: subject)
+        self.session = session
+        self.session.delegate = self.delegate
+        self.session.activate()
+        
+        subject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$sharedShift)
+    }
+#endif
+    
+    //MARK: Shared
+    
+    func lunchInMinutes(lunch: String) -> Double{
+        return (Double(lunch) ?? 30) * 60
+    }
+    
+    func workLengthInMinutes(work: String) -> Double{
+        return (Double(work) ?? 8) * 3600
+    }
+    
+    
     //Calculates the time to end the shift by adding the lunch and shift length to the start time
     func clockOut() -> Date {
         
-        let lunchTime = (Double(lunchLength) ?? 30) * 60
-        let shiftTime = (Double(workLength) ?? 8) * 3600
+        let lunchTime = lunchInMinutes(lunch: lunchLength)
+        let shiftTime = workLengthInMinutes(work: workLength)
         
         endTime = start.advanced(by: lunchTime + shiftTime)
         return endTime
@@ -33,7 +72,7 @@ final class Shift: ObservableObject {
 
         let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
         let today = Calendar.current.dateComponents([.hour, .minute, .second], from: Date.now)
-
+        
         let hours   = (time.hour ?? 0) - (today.hour ?? 0)
         let minutes = (time.minute ?? 0) - (today.minute ?? 0)
         let seconds = (time.second ?? 0) - (today.second ?? 0)
@@ -42,12 +81,13 @@ final class Shift: ObservableObject {
         return timeRemaining
     }
 
+    //MARK: Widget
     //Does the math that is contained in shift.ClockOut and shift.Remaining, but uses local variables to allow for updaing when the data changes
     //Used for the Widget and the Watch App
     //The Math is the same as above but necessary since the views on the widget and the watch app don't change
     func timeString() -> Date {
-        let lunchTime = (Double(lunchLength) ?? 30) * 60
-        let shiftTime = (Double(workLength) ?? 8) * 3600
+        let lunchTime = lunchInMinutes(lunch: lunchLength)
+        let shiftTime = workLengthInMinutes(work: workLength)
         let endTime = Calendar.current.date(from: DateComponents(hour: 0, minute: 0, second: 0))!.advanced(by: lunchTime + shiftTime + Double(startTime))
         
         let time = Calendar.current.dateComponents([.hour, .minute, .second], from: endTime)
@@ -61,6 +101,24 @@ final class Shift: ObservableObject {
         
         return Date().advanced(by: Double(tempTime))
     }
+    
+    //MARK: Apple Watch
+    
+    //Handles sending the updated data to the watch when the start time, lunch length, or work length change
+    //This way all of the data is handled by the shift class and we don't need hella environment variables
+//    func sendToWatch(updatedValue: [String : Int]) {
+#if !os(macOS)
+    func sendToWatch() {
+        sharedShift = Int(workLengthInMinutes(work: workLength) + lunchInMinutes(lunch: lunchLength))
+        print(sharedShift)
+        do {
+            try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "startTime": self.start, "workLength" : self.workLength])
+//            print(session.applicationContext)
+        } catch {
+            print("whoops")
+        }
+    }
+#endif
     
 }
 

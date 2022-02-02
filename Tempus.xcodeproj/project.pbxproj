@@ -15,6 +15,10 @@
 		440F27E02790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44128ACC279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
 		44128ACD279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
+		445F2EDE27A85F3100CA5C37 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
+		445F2EDF27A85F3100CA5C37 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
+		445F2EE127A85F3A00CA5C37 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EE027A85F3A00CA5C37 /* Counter.swift */; };
+		445F2EE227A85F3A00CA5C37 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EE027A85F3A00CA5C37 /* Counter.swift */; };
 		4469188A2798B71C001B40EF /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44734FDD27976BB200260EE7 /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44734FDB27976B8F00260EE7 /* QuitButton.swift */; };
 		448FE08C2791E04000CD9127 /* ShiftLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */; };
@@ -23,6 +27,7 @@
 		448FE08F2791E04000CD9127 /* LunchBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED602790F0C000EB1D17 /* LunchBlocks.swift */; };
 		448FE0902791E04000CD9127 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED622790FAB600EB1D17 /* Lunch.swift */; };
 		448FE0912791E04000CD9127 /* ClockIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED582790EEDF00EB1D17 /* ClockIn.swift */; };
+		449DE8DB27A99C720004E130 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
 		44A1D51327A08AF5003BB79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
 		44A1D51427A08AF9003BB79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
 		44A1D51A27A1B883003BB79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A1D51927A1B883003BB79D /* Assets.xcassets */; };
@@ -117,6 +122,8 @@
 		440F27DE2790C34C002622F1 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		44128ACB279792A600CE9A57 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		4418BB012799CC7300B5C3D6 /* Tempus--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tempus--iOS--Info.plist"; sourceTree = "<group>"; };
+		445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
+		445F2EE027A85F3A00CA5C37 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		4461F1C52798808B00A3F5A7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4461F1C72798808B00A3F5A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		44734FDB27976B8F00260EE7 /* QuitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButton.swift; sourceTree = "<group>"; };
@@ -198,6 +205,7 @@
 				440F27BD278FA151002622F1 /* TempusApp.swift */,
 				440F27BE278FA151002622F1 /* ContentView.swift */,
 				44128ACB279792A600CE9A57 /* PreferencesView.swift */,
+				445F2EE027A85F3A00CA5C37 /* Counter.swift */,
 				448FE0932791E57300CD9127 /* Elements */,
 				448FE0922791E55900CD9127 /* Model */,
 			);
@@ -237,6 +245,7 @@
 		448FE0922791E55900CD9127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */,
 				440F27DE2790C34C002622F1 /* Shift.swift */,
 			);
 			path = Model;
@@ -491,12 +500,14 @@
 			files = (
 				440F27CF278FA153002622F1 /* ContentView.swift in Sources */,
 				440F27DF2790C34C002622F1 /* Shift.swift in Sources */,
+				445F2EE127A85F3A00CA5C37 /* Counter.swift in Sources */,
 				44BCED592790EEDF00EB1D17 /* ClockIn.swift in Sources */,
 				440F27CD278FA153002622F1 /* TempusApp.swift in Sources */,
 				44BCED612790F0C000EB1D17 /* LunchBlocks.swift in Sources */,
 				44128ACC279792A600CE9A57 /* PreferencesView.swift in Sources */,
 				44BCED5B2790EF4500EB1D17 /* LunchMinutes.swift in Sources */,
 				44BCED5F2790F03800EB1D17 /* ClockOut.swift in Sources */,
+				445F2EDE27A85F3100CA5C37 /* SessionDelegator.swift in Sources */,
 				44BCED632790FAB600EB1D17 /* Lunch.swift in Sources */,
 				44BCED5D2790EF9C00EB1D17 /* ShiftLength.swift in Sources */,
 			);
@@ -526,8 +537,10 @@
 			files = (
 				44A1D53E27A1BB02003BB79D /* Shift.swift in Sources */,
 				44A1D52527A1B883003BB79D /* ContentView.swift in Sources */,
+				445F2EDF27A85F3100CA5C37 /* SessionDelegator.swift in Sources */,
 				44A1D52727A1B883003BB79D /* TempusApp.swift in Sources */,
 				44A1D52927A1B883003BB79D /* ComplicationController.swift in Sources */,
+				445F2EE227A85F3A00CA5C37 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +550,7 @@
 			files = (
 				4469188A2798B71C001B40EF /* Shift.swift in Sources */,
 				44A88626279894820070DF30 /* Widgit.swift in Sources */,
+				449DE8DB27A99C720004E130 /* SessionDelegator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,7 +713,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				SDKROOT = iphoneos;
@@ -732,7 +746,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				SDKROOT = iphoneos;
