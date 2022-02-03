@@ -26,10 +26,10 @@ class SessionDelegater: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         DispatchQueue.main.async(execute: {
             if let info = applicationContext["sharedShift"] as? Int {
+                UserDefaults.standard.set(applicationContext["workLength"] as! String, forKey: "workLength")
+                UserDefaults.standard.set(applicationContext["lunchLength"] as! String, forKey: "lunchLength")
+                UserDefaults.standard.set(applicationContext["startTime"] as! Int, forKey: "startTime")
                 print(applicationContext)
-                Shift().lunchLength = applicationContext["lunchLength"] as! String
-                Shift().start = applicationContext["startTime"] as! Date
-                Shift().workLength = applicationContext["workLength"] as! String
                 self.countSubject.send(info)
             } else {
                 print("There was an error")

@@ -21,15 +21,13 @@ final class Shift: ObservableObject {
     
     var endTime = Date()
     var timeRemaining = 3600
-    
-    
 
 #if !os(macOS)
     var session: WCSession
     let delegate: WCSessionDelegate
     let subject = PassthroughSubject<Int, Never>()
     
-    @Published private(set) var sharedShift = 28800
+    @Published private(set) var sharedShift = 30600
     
     //Inits the session between the phone and the watch
     //Could possible look to limit this if a device doesn't have a paired watch
@@ -110,10 +108,9 @@ final class Shift: ObservableObject {
 #if !os(macOS)
     func sendToWatch() {
         sharedShift = Int(workLengthInMinutes(work: workLength) + lunchInMinutes(lunch: lunchLength))
-        print(sharedShift)
         do {
-            try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "startTime": self.start, "workLength" : self.workLength])
-//            print(session.applicationContext)
+//            try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "startTime": self.start, "workLength" : self.workLength])
+            try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "workLength" : self.workLength, "startTime" : self.startTime])
         } catch {
             print("whoops")
         }
