@@ -109,7 +109,6 @@ final class Shift: ObservableObject {
     func sendToWatch() {
         sharedShift = Int(workLengthInMinutes(work: workLength) + lunchInMinutes(lunch: lunchLength))
         do {
-//            try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "startTime": self.start, "workLength" : self.workLength])
             try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "workLength" : self.workLength, "startTime" : self.startTime])
         } catch {
             print("whoops")

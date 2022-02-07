@@ -29,7 +29,6 @@ class SessionDelegater: NSObject, WCSessionDelegate {
                 UserDefaults(suiteName:"group.com.sports.Tempus")!.set(applicationContext["workLength"] as! String, forKey: "workLength")
                 UserDefaults(suiteName:"group.com.sports.Tempus")!.set(applicationContext["lunchLength"] as! String, forKey: "lunchLength")
                 UserDefaults(suiteName:"group.com.sports.Tempus")!.set(applicationContext["startTime"] as! Int, forKey: "startTime")
-                print(applicationContext)
                 self.countSubject.send(info)
             } else {
                 print("There was an error")
