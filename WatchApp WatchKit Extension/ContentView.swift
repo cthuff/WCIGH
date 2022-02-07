@@ -18,16 +18,15 @@ struct ContentView: View {
     var body: some View {
         VStack{
             ProgressView(value: timeRemaining)
-                .progressViewStyle(CircularProgressViewStyle(tint: .purple  ))
-                .scaleEffect(x: 1.5, y: 1.5, anchor: .center)
-                .frame(width: 70, height: 70, alignment: .center)
+                .progressViewStyle(CustomCircularProgressViewStyle())
                 .onReceive(timer) { time in
-                    if timeRemaining > fraction / 2 {
+                    if timeRemaining > fraction {
                     timeRemaining -= fraction
                     }
                 }
                 .progressViewStyle(.circular)
-                .padding()
+                .padding(.top, 25 )
+                .padding(.bottom, 15)
             Text(shiftTimer, style: .timer)
                 .font(.title2)
                 .foregroundColor(.cyan)
@@ -37,15 +36,8 @@ struct ContentView: View {
             fraction = 1 / Float(shift.sharedShift)
             timeRemaining = fraction * Float(shift.endTime.distance(to: shift.timeString()))
             shiftTimer = shift.timeString()
-            print(shiftTimer)
         }
-        .onAppear(perform: {
-            shiftTimer = shift.timeString()
-            let totalTime = Double(shift.sharedShift) //((Double(shift.workLength) ?? 8) * 3600 + (Double(shift.lunchLength) ?? 30)  * 60)
-            fraction = Float(1 / totalTime)
-            timeRemaining = fraction * Float(shift.endTime.distance(to: shift.timeString()))
-            print("On Appear Time Remaining: \(timeRemaining)")
-        })
+        
     }
 
 }
@@ -62,5 +54,22 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environmentObject(shift)
     }
 }
-
-
+struct CustomCircularProgressViewStyle: ProgressViewStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        ZStack {
+            ProgressView(value: configuration.fractionCompleted)
+                .tint(.purple)
+                .scaleEffect(x: 2.0, y: 2.0, anchor: .center)
+                .frame(width: 75, height: 75, alignment: .center)
+            if let fractionCompleted = configuration.fractionCompleted {
+                Text(fractionCompleted < 1 ?
+                        "\(Int((configuration.fractionCompleted ?? 0) * 100))%"
+                        : "Done!"
+                )
+                .foregroundColor(fractionCompleted < 1 ? .primary : .green)
+                .font(.title3)
+            }
+        }
+    }
+}
+ 

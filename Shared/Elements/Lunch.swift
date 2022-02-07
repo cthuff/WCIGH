@@ -24,6 +24,7 @@ struct Lunch: View {
             .padding(.bottom, 5)
             .pickerStyle(.segmented)
             .frame(maxWidth: 450)
+            .onChange(of: shift.lunchLength, perform: {_ in shift.sendToWatch()})
             .onChange(of: lunchPicker){ _ in
                 withAnimation(Animation.easeInOut(duration: 0.25)) {
                     switch lunchPicker {
