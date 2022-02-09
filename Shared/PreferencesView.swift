@@ -15,14 +15,14 @@ struct PreferencesView: View {
             HStack{
                 Text("How long is your usual lunch?")
                 TextField("0", text: $shift.lunchLength)
-                    .frame(width: 40)
+                    .frame(width: 35)
                     .padding(.leading)
                 Text("minutes")
             }
             HStack{
                 Text("How long is your usual shift?")
                 TextField("0", text: $shift.workLength)
-                    .frame(width: 40)
+                    .frame(width: 35)
                     .padding(.leading)
                 //Loads the "Done" button in the toolbar for this view in iOS only
                 #if os(iOS)
@@ -38,7 +38,7 @@ struct PreferencesView: View {
                 Text("hours")
             }
         }
-        .padding(.horizontal, 5)
+        .padding(.horizontal, 10)
         #if os(iOS)
         .keyboardType(.numberPad)
         #endif

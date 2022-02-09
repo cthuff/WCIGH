@@ -20,7 +20,7 @@ struct QuitButton: View {
         .padding(.top, 10)
         .padding(.bottom)
         .padding(.trailing, 15)
-        .frame(width: 360.0, alignment: .trailing)
+        .frame(alignment: .trailing)
     }
 }
 

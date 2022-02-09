@@ -14,22 +14,28 @@ struct ContentView: View {
     
     @State private var timeRemaining = 3600
     @State private var showPrefs = false
+    @State private var showInfo = false
+    @State private var isRotated = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack{
-            //Places the gear button at the top of the application.
-            //When this button is pressed, toggle between this View and PreferencesView
-            Button(action: {withAnimation(Animation.easeInOut(duration: 0.25)) {showPrefs.toggle()}}){
-                Image(systemName: "gearshape.fill")
+            HStack{
+                //Places the gear button at the top of the application.
+                //When this button is pressed, toggle between this View and PreferencesView
+                Button(action: {withAnimation(Animation.linear(duration: 0.25)) {showPrefs.toggle(); showInfo = false; isRotated.toggle()}}){
+                    Image(systemName: "gearshape.fill")
+                        .rotationEffect(Angle.degrees(isRotated ? 300 : 0))
+                }
+                .padding(.top, 15)
+                .padding(.bottom)
+                .padding(.leading, 15)
+                .frame(alignment: .leading)
+                ב״ה()
             }
-            .padding(.top, 15)
-            .padding(.bottom)
-            .padding(.trailing, 15)
-            .frame(width: 350.0, alignment: .trailing)
             //Loads the main content of the application
-            if(showPrefs == false){
+            if(showPrefs == false && showInfo == false){
                 ClockIn()
                 Lunch()
                 ShiftLength()
@@ -45,20 +51,39 @@ struct ContentView: View {
                 }
                 .padding(.top, 15)
                 .font(.title2)
-            } else {
+            } else if (showPrefs == true) {
                 //Loads the Preferences for the Application
                 PreferencesView()
                 //When this button is pressed, return to the main View above
-                Button(action: {withAnimation(Animation.easeInOut(duration: 0.25)) {showPrefs.toggle()}}){
+                Button(action: {withAnimation(Animation.linear(duration: 0.25)) {showPrefs.toggle(); showInfo = false}}){
                     Text("Save")
                         .padding()
                 }
                 .padding(.top, 10)
+            } else if (showInfo == true){
+                InfoView()
+                Button(action: {withAnimation(Animation.linear) {showInfo.toggle(); showPrefs = false}}){
+                    Text("Dismiss")
+                        .padding()
+                }
+                .padding(.top, 10)
             }
-            #if os(macOS)
-            //Since the Applicaiton doesn't exist in the dock, a quit button will be loaded at the bottom so the user can close it at any time
-            QuitButton()
-            #endif
+            HStack{
+                //Places the info button at the bottom of the application.
+                //When this button is pressed, toggle between this View and InfoView
+                Button(action: {withAnimation(Animation.easeIn(duration: 0.25)) {showInfo.toggle(); showPrefs = false}}){
+                    Image(systemName: "info.circle")
+                }
+                .padding(.top, 15)
+                .padding(.bottom)
+                .padding(.leading, 15)
+                .frame(alignment: .leading)
+                Spacer()
+                #if os(macOS)
+                //Since the Applicaiton doesn't exist in the dock, a quit button will be loaded at the bottom so the user can close it at any time
+                QuitButton()
+                #endif
+            }
         }
         //After the app is loaded, reset the saved start time so the widget will update to a new start time when it changes
         .onAppear(perform: {shift.startTime = 28800})
