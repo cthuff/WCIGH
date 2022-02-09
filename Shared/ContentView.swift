@@ -22,6 +22,16 @@ struct ContentView: View {
     var body: some View {
         VStack{
             HStack{
+                //Places the info button at the bottom of the application.
+                //When this button is pressed, toggle between this View and InfoView
+                Button(action: {withAnimation(Animation.easeIn(duration: 0.25)) {showInfo.toggle(); showPrefs = false}}){
+                    Image(systemName: "info.circle")
+                }
+                .padding(.top, 15)
+                .padding(.bottom)
+                .padding(.leading, 15)
+                .frame(alignment: .leading)
+                Spacer()
                 //Places the gear button at the top of the application.
                 //When this button is pressed, toggle between this View and PreferencesView
                 Button(action: {withAnimation(Animation.linear(duration: 0.25)) {showPrefs.toggle(); showInfo = false; isRotated.toggle()}}){
@@ -30,9 +40,10 @@ struct ContentView: View {
                 }
                 .padding(.top, 15)
                 .padding(.bottom)
-                .padding(.leading, 15)
-                .frame(alignment: .leading)
-                ב״ה()
+                .padding(.trailing, 15)
+                .frame(alignment: .trailing)
+                
+                
             }
             //Loads the main content of the application
             if(showPrefs == false && showInfo == false){
@@ -69,17 +80,9 @@ struct ContentView: View {
                 .padding(.top, 10)
             }
             HStack{
-                //Places the info button at the bottom of the application.
-                //When this button is pressed, toggle between this View and InfoView
-                Button(action: {withAnimation(Animation.easeIn(duration: 0.25)) {showInfo.toggle(); showPrefs = false}}){
-                    Image(systemName: "info.circle")
-                }
-                .padding(.top, 15)
-                .padding(.bottom)
-                .padding(.leading, 15)
-                .frame(alignment: .leading)
-                Spacer()
+                
                 #if os(macOS)
+                Spacer()
                 //Since the Applicaiton doesn't exist in the dock, a quit button will be loaded at the bottom so the user can close it at any time
                 QuitButton()
                 #endif

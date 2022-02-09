@@ -17,8 +17,6 @@
 		44128ACD279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
 		445F2EDE27A85F3100CA5C37 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
 		445F2EDF27A85F3100CA5C37 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
-		445F2EE127A85F3A00CA5C37 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EE027A85F3A00CA5C37 /* Counter.swift */; };
-		445F2EE227A85F3A00CA5C37 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EE027A85F3A00CA5C37 /* Counter.swift */; };
 		4469188A2798B71C001B40EF /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44734FDD27976BB200260EE7 /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44734FDB27976B8F00260EE7 /* QuitButton.swift */; };
 		448FE08C2791E04000CD9127 /* ShiftLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */; };
@@ -39,7 +37,7 @@
 		44A1D52927A1B883003BB79D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A1D52827A1B883003BB79D /* ComplicationController.swift */; };
 		44A1D52B27A1B884003BB79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A1D52A27A1B884003BB79D /* Assets.xcassets */; };
 		44A1D52E27A1B884003BB79D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A1D52D27A1B884003BB79D /* Preview Assets.xcassets */; };
-		44A1D53227A1B884003BB79D /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 44A1D51727A1B881003BB79D /* WatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		44A1D53227A1B884003BB79D /* Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 44A1D51727A1B881003BB79D /* Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		44A1D53E27A1BB02003BB79D /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44A88622279894820070DF30 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C52798808B00A3F5A7 /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		44A88623279894820070DF30 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C72798808B00A3F5A7 /* SwiftUI.framework */; platformFilter = maccatalyst; };
@@ -109,7 +107,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				44A1D53227A1B884003BB79D /* WatchApp.app in Embed Watch Content */,
+				44A1D53227A1B884003BB79D /* Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,12 +125,11 @@
 		44128ACB279792A600CE9A57 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		4418BB012799CC7300B5C3D6 /* Tempus--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tempus--iOS--Info.plist"; sourceTree = "<group>"; };
 		445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
-		445F2EE027A85F3A00CA5C37 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		4461F1C52798808B00A3F5A7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4461F1C72798808B00A3F5A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		44734FDB27976B8F00260EE7 /* QuitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButton.swift; sourceTree = "<group>"; };
 		449EA6DD27B33A8B009A2091 /* ב״ה.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ב״ה.swift"; sourceTree = "<group>"; };
-		44A1D51727A1B881003BB79D /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A1D51727A1B881003BB79D /* Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A1D51927A1B883003BB79D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A1D51F27A1B883003BB79D /* WatchApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A1D52427A1B883003BB79D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -212,7 +209,6 @@
 				440F27BE278FA151002622F1 /* ContentView.swift */,
 				44B287BD27B1EAE00064F350 /* InfoView.swift */,
 				44128ACB279792A600CE9A57 /* PreferencesView.swift */,
-				445F2EE027A85F3A00CA5C37 /* Counter.swift */,
 				448FE0932791E57300CD9127 /* Elements */,
 				448FE0922791E55900CD9127 /* Model */,
 			);
@@ -225,7 +221,7 @@
 				440F27C4278FA153002622F1 /* Tempus.app */,
 				440F27CA278FA153002622F1 /* Tempus.app */,
 				44A88621279894820070DF30 /* WidgitExtension.appex */,
-				44A1D51727A1B881003BB79D /* WatchApp.app */,
+				44A1D51727A1B881003BB79D /* Watch App.app */,
 				44A1D51F27A1B883003BB79D /* WatchApp WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -368,7 +364,7 @@
 			);
 			name = WatchApp;
 			productName = WatchApp;
-			productReference = 44A1D51727A1B881003BB79D /* WatchApp.app */;
+			productReference = 44A1D51727A1B881003BB79D /* Watch App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		44A1D51E27A1B883003BB79D /* WatchApp WatchKit Extension */ = {
@@ -509,7 +505,6 @@
 				440F27CF278FA153002622F1 /* ContentView.swift in Sources */,
 				449EA6DE27B33A8B009A2091 /* ב״ה.swift in Sources */,
 				440F27DF2790C34C002622F1 /* Shift.swift in Sources */,
-				445F2EE127A85F3A00CA5C37 /* Counter.swift in Sources */,
 				44BCED592790EEDF00EB1D17 /* ClockIn.swift in Sources */,
 				440F27CD278FA153002622F1 /* TempusApp.swift in Sources */,
 				44B287BE27B1EAE00064F350 /* InfoView.swift in Sources */,
@@ -552,7 +547,6 @@
 				445F2EDF27A85F3100CA5C37 /* SessionDelegator.swift in Sources */,
 				44A1D52727A1B883003BB79D /* TempusApp.swift in Sources */,
 				44A1D52927A1B883003BB79D /* ComplicationController.swift in Sources */,
-				445F2EE227A85F3A00CA5C37 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,12 +906,11 @@
 				DEVELOPMENT_TEAM = PK5UZ58Q86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = WatchApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.sports.Tempus;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Watch App";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -939,12 +932,11 @@
 				DEVELOPMENT_TEAM = PK5UZ58Q86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = WatchApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.sports.Tempus;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Watch App";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

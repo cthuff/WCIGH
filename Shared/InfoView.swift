@@ -9,12 +9,21 @@ import SwiftUI
 
 struct InfoView: View {
     var body: some View {
-        VStack{
-            Text("Info")
-                .font(.title)
+        VStack(alignment: .center){
+            HStack{
+                Spacer()
+            ב״ה()
+            }
+            Text("Designed by Craig Huff and Samantha Rosas")
+                .padding(.bottom, 5)
+                .lineLimit(nil)
+            Link("Personal Website", destination: URL(string: "https://craighuff.com")!)
             Text("A special thank you to Paul Hudson for the great SwiftUI Tutorials")
-                .padding(.vertical, 5)
+                .padding(5)
+                .lineLimit(nil)
             Link("Learn SwiftUI", destination: URL(string: "https://www.hackingwithswift.com/quick-start/swiftui")!)
+                .padding(.bottom, 5)
+            
         }
     }
 }
