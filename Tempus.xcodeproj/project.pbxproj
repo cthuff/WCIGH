@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4406BC3427B441A70069E776 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
 		440F27CD278FA153002622F1 /* TempusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27BD278FA151002622F1 /* TempusApp.swift */; };
 		440F27CE278FA153002622F1 /* TempusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27BD278FA151002622F1 /* TempusApp.swift */; };
 		440F27CF278FA153002622F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27BE278FA151002622F1 /* ContentView.swift */; };
@@ -25,7 +26,6 @@
 		448FE08F2791E04000CD9127 /* LunchBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED602790F0C000EB1D17 /* LunchBlocks.swift */; };
 		448FE0902791E04000CD9127 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED622790FAB600EB1D17 /* Lunch.swift */; };
 		448FE0912791E04000CD9127 /* ClockIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED582790EEDF00EB1D17 /* ClockIn.swift */; };
-		449DE8DB27A99C720004E130 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
 		449EA6DE27B33A8B009A2091 /* ב״ה.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EA6DD27B33A8B009A2091 /* ב״ה.swift */; };
 		449EA6DF27B33A8B009A2091 /* ב״ה.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EA6DD27B33A8B009A2091 /* ב״ה.swift */; };
 		44A1D51327A08AF5003BB79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F27BF278FA153002622F1 /* Assets.xcassets */; };
@@ -556,7 +556,7 @@
 			files = (
 				4469188A2798B71C001B40EF /* Shift.swift in Sources */,
 				44A88626279894820070DF30 /* Widgit.swift in Sources */,
-				449DE8DB27A99C720004E130 /* SessionDelegator.swift in Sources */,
+				4406BC3427B441A70069E776 /* SessionDelegator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

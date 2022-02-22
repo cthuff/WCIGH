@@ -25,6 +25,6 @@ struct ClockOut: View {
 struct ClockOut_Previews: PreviewProvider {
     static let shift = Shift()
     static var previews: some View {
-        ClockOut()
+        ClockOut().environmentObject(shift)
     }
 }

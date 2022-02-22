@@ -24,7 +24,7 @@ struct ContentView: View {
             HStack{
                 //Places the info button at the bottom of the application.
                 //When this button is pressed, toggle between this View and InfoView
-                Button(action: {withAnimation(Animation.easeIn(duration: 0.25)) {showInfo.toggle(); showPrefs = false}}){
+                Button(action: {withAnimation(Animation.linear(duration: 0.25)) {showInfo.toggle(); isRotated.toggle(); showPrefs = false}}){
                     Image(systemName: "info.circle")
                 }
                 .padding(.top, 15)
