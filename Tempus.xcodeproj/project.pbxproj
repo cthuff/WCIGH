@@ -16,6 +16,8 @@
 		440F27E02790C34C002622F1 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44128ACC279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
 		44128ACD279792A600CE9A57 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44128ACB279792A600CE9A57 /* PreferencesView.swift */; };
+		444ACA1527DA68E600EA77D7 /* GoHomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444ACA1427DA68E600EA77D7 /* GoHomeButton.swift */; };
+		444ACA1627DA68E600EA77D7 /* GoHomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444ACA1427DA68E600EA77D7 /* GoHomeButton.swift */; };
 		445F2EDE27A85F3100CA5C37 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
 		445F2EDF27A85F3100CA5C37 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */; };
 		4469188A2798B71C001B40EF /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
@@ -124,6 +126,7 @@
 		440F27DE2790C34C002622F1 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		44128ACB279792A600CE9A57 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		4418BB012799CC7300B5C3D6 /* Tempus--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tempus--iOS--Info.plist"; sourceTree = "<group>"; };
+		444ACA1427DA68E600EA77D7 /* GoHomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoHomeButton.swift; sourceTree = "<group>"; };
 		445F2EDD27A85F3100CA5C37 /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
 		4461F1C52798808B00A3F5A7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4461F1C72798808B00A3F5A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -263,6 +266,7 @@
 				44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */,
 				44BCED582790EEDF00EB1D17 /* ClockIn.swift */,
 				44BCED5E2790F03800EB1D17 /* ClockOut.swift */,
+				444ACA1427DA68E600EA77D7 /* GoHomeButton.swift */,
 				449EA6DD27B33A8B009A2091 /* ב״ה.swift */,
 			);
 			path = Elements;
@@ -508,6 +512,7 @@
 				44BCED592790EEDF00EB1D17 /* ClockIn.swift in Sources */,
 				440F27CD278FA153002622F1 /* TempusApp.swift in Sources */,
 				44B287BE27B1EAE00064F350 /* InfoView.swift in Sources */,
+				444ACA1527DA68E600EA77D7 /* GoHomeButton.swift in Sources */,
 				44BCED612790F0C000EB1D17 /* LunchBlocks.swift in Sources */,
 				44128ACC279792A600CE9A57 /* PreferencesView.swift in Sources */,
 				44BCED5B2790EF4500EB1D17 /* LunchMinutes.swift in Sources */,
@@ -528,6 +533,7 @@
 				448FE08C2791E04000CD9127 /* ShiftLength.swift in Sources */,
 				44B287BF27B1EAE00064F350 /* InfoView.swift in Sources */,
 				448FE08D2791E04000CD9127 /* ClockOut.swift in Sources */,
+				444ACA1627DA68E600EA77D7 /* GoHomeButton.swift in Sources */,
 				449EA6DF27B33A8B009A2091 /* ב״ה.swift in Sources */,
 				440F27D0278FA153002622F1 /* ContentView.swift in Sources */,
 				448FE08F2791E04000CD9127 /* LunchBlocks.swift in Sources */,

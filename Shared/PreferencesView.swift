@@ -13,14 +13,18 @@ struct PreferencesView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("How long is your usual lunch?")
+                Spacer()
+                ב״ה()
+            }
+            HStack{
+                Text("Average Lunch Length:")
                 TextField("0", text: $shift.lunchLength)
                     .frame(width: 35)
                     .padding(.leading)
                 Text("minutes")
             }
             HStack{
-                Text("How long is your usual shift?")
+                Text("Average Shift Length:")
                 TextField("0", text: $shift.workLength)
                     .frame(width: 35)
                     .padding(.leading)

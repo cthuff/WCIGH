@@ -59,9 +59,11 @@ struct ContentView: View {
                         .onChange(of: shift.remaining()) { _ in
                             timeRemaining = shift.timeRemaining
                         }
+                    .padding(.top, 1)
                 }
-                .padding(.top, 15)
                 .font(.title2)
+                GoHomeButton()
+                    .padding(5.0)
             } else if (showPrefs == true) {
                 //Loads the Preferences for the Application
                 PreferencesView()
@@ -118,8 +120,11 @@ struct ContentView_Previews: PreviewProvider {
     static let shift = Shift()
     static var previews: some View {
         Group {
-            ContentView().environmentObject(shift)
+            ContentView()
+                .environmentObject(shift)
+//                .preferredColorScheme(.dark)
         }
+        
     }
 }
 
