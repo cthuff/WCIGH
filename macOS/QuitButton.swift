@@ -17,9 +17,8 @@ struct QuitButton: View {
             .font(.caption)
             .fontWeight(.semibold)
         }
-        .padding(.top, 10)
+        .padding(.vertical)
         .padding(.bottom)
-        .padding(.trailing, 15)
         .frame(alignment: .trailing)
     }
 }

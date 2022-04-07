@@ -17,14 +17,15 @@ struct Lunch: View {
     var body: some View {
         VStack{
             Picker(selection: $lunchPicker, label: Text("Lunch Options") .bold()) {
-                Text("Minutes").tag(1)
-                Text("Clock").tag(2)
+                Text("Clock").tag(1)
+                Text("Minutes").tag(2)
             }
-            .padding(.horizontal, 50)
-            .padding(.bottom, 5)
+            .padding(.horizontal)
+            
+            .padding(.bottom)
             .pickerStyle(.segmented)
-            .frame(maxWidth: 450)
             #if !os(macOS)
+            .frame(maxWidth: UIScreen.main.bounds.size.width / 1.25)
             .onChange(of: shift.lunchLength, perform: {_ in shift.sendToWatch()})
             #endif
             .onChange(of: lunchPicker){ _ in
@@ -38,10 +39,10 @@ struct Lunch: View {
                 }
             }
             if (showPicker){
-                LunchMinutes()
+                LunchBlocks()
             }
             else {
-                LunchBlocks()
+                LunchMinutes()
             }
         }
     }

@@ -27,9 +27,8 @@ struct ContentView: View {
                 Button(action: {withAnimation(Animation.linear(duration: 0.25)) {showInfo.toggle(); isRotated.toggle(); showPrefs = false}}){
                     Image(systemName: "info.circle")
                 }
-                .padding(.top, 15)
-                .padding(.bottom)
-                .padding(.leading, 15)
+                .padding(.vertical)
+                .padding(.leading)
                 .frame(alignment: .leading)
                 Spacer()
                 //Places the gear button at the top of the application.
@@ -38,9 +37,8 @@ struct ContentView: View {
                     Image(systemName: "gearshape.fill")
                         .rotationEffect(Angle.degrees(isRotated ? 300 : 0))
                 }
-                .padding(.top, 15)
-                .padding(.bottom)
-                .padding(.trailing, 15)
+                .padding(.vertical)
+                .padding(.trailing)
                 .frame(alignment: .trailing)
                 
                 
@@ -63,7 +61,7 @@ struct ContentView: View {
                 }
                 .font(.title2)
                 GoHomeButton()
-                    .padding(5.0)
+                    .padding()
             } else if (showPrefs == true) {
                 //Loads the Preferences for the Application
                 PreferencesView()
@@ -72,14 +70,14 @@ struct ContentView: View {
                     Text("Save")
                         .padding()
                 }
-                .padding(.top, 10)
+                .padding(.top)
             } else if (showInfo == true){
                 InfoView()
                 Button(action: {withAnimation(Animation.linear) {showInfo.toggle(); showPrefs = false}}){
                     Text("Dismiss")
                         .padding()
                 }
-                .padding(.top, 10)
+                .padding(.top)
             }
             HStack{
                 
@@ -92,7 +90,11 @@ struct ContentView: View {
         }
         //After the app is loaded, reset the saved start time so the widget will update to a new start time when it changes
         .onAppear(perform: {shift.startTime = 28800})
+        #if !os(macOS)
+        .frame(idealWidth: (UIScreen.main.bounds.size.width))
+        #else
         .frame(minWidth: 350, maxWidth: 450)
+        #endif 
         .onReceive(timer) { time in
             timeRemaining -= 1
         }
@@ -119,11 +121,22 @@ struct ContentView_Previews: PreviewProvider {
     
     static let shift = Shift()
     static var previews: some View {
-        Group {
+        Group{
             ContentView()
+                .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
                 .environmentObject(shift)
-//                .preferredColorScheme(.dark)
+//            ContentView()
+//                .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+//                .environmentObject(shift)
+//            ContentView()
+//                .environmentObject(shift)
+//                .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
+//        ContentView()
+//            .environmentObject(shift)
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
         }
+//        .environment(\.sizeCategory, .accessibilityMedium)
+        
         
     }
 }

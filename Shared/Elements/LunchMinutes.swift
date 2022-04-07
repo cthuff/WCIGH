@@ -12,7 +12,7 @@ struct LunchMinutes: View {
     @EnvironmentObject var shift: Shift
     var body: some View {
         HStack{
-            Text("How long was lunch?")
+            Text("Lunch Length: ")
             TextField("30", text: $shift.lunchLength)
                 .frame(width: 40)
                 .padding(.leading)

@@ -18,7 +18,7 @@ struct ClockOut: View {
                 .foregroundColor(.purple)
         }
         .font(.title2)
-        .padding(.top, 15)
+        .padding(.top)
     }
 }
 

@@ -12,7 +12,7 @@ struct ShiftLength: View {
     @EnvironmentObject var shift: Shift
     var body: some View {
         HStack{
-            Text("How long is your shift?")
+            Text("Shift Length: ")
             TextField("8", text: $shift.workLength)
                 .frame(width: 40)
                 .padding(.leading)

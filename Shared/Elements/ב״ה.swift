@@ -11,9 +11,7 @@ struct ב״ה: View {
     var body: some View {
         Text("ב״ה")
             .foregroundColor(.accentColor)
-            .padding(.top, 10)
-            .padding(.bottom)
-            .padding(.trailing, 15)
+            .padding()
             .frame(alignment: .trailing)
     }
 }

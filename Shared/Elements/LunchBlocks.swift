@@ -17,23 +17,27 @@ struct LunchBlocks: View {
     var body: some View {
         VStack{
             HStack{
-                Text("Started lunch at:")
+                Text("Lunch Start:")
                     .font(.title3)
                 DatePicker("", selection: $lunchStart, displayedComponents: [.hourAndMinute])
                     .frame(width: 90)
             }
             HStack{
-                Text("Ended lunch at:")
+                Text("Lunch End:")
                     .font(.title3)
                 DatePicker("", selection: $lunchEnd, displayedComponents: [.hourAndMinute])
                     .frame(width: 90)
             }
+            .onAppear() {
+                lunchEnd = lunchStart.advanced(by: shift.lunchInMinutes(lunch: shift.lunchLength))
+            }
         //Watches both lunch values in case the user doesn't edit one or the other
         }.onChange(of: lunchEnd) { _ in
-            shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
+//            shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
         }
         .onChange(of: lunchStart) { _ in
-            shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
+//            shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
+            lunchEnd = lunchStart.advanced(by: shift.lunchInMinutes(lunch: shift.lunchLength))
         }
     }
 }

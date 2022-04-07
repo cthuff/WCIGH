@@ -42,7 +42,7 @@ struct PreferencesView: View {
                 Text("hours")
             }
         }
-        .padding(.horizontal, 10)
+        .padding(.horizontal)
         #if os(iOS)
         .keyboardType(.numberPad)
         #endif
