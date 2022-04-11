@@ -1,57 +1,61 @@
 {
   "images" : [
     {
+      "filename" : "When Can I Go Home Icon-16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "When Can I Go Home Icon-32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "When Can I Go Home Icon-32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "When Can I Go Home Icon-64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "PlaceholderAppIcon-clock-1029.png",
+      "filename" : "When Can I Go Home Icon-128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "PlaceholderAppIcon-clock-1028.png",
+      "filename" : "When Can I Go Home Icon-256.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "PlaceholderAppIcon-clock-1027.png",
+      "filename" : "When Can I Go Home Icon-256.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "PlaceholderAppIcon-clock-1026.png",
+      "filename" : "When Can I Go Home Icon-512.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "PlaceholderAppIcon-clock-1025.png",
+      "filename" : "When Can I Go Home Icon-512.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "PlaceholderAppIcon-clock-1024.png",
+      "filename" : "When Can I Go Home Icon-1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

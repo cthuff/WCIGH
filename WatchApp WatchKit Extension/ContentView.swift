@@ -25,12 +25,12 @@ struct ContentView: View {
                     }
                 }
                 .progressViewStyle(.circular)
-                .padding(.top, 25 )
-                .padding(.bottom, 15)
+                .padding()
             Text(shiftTimer, style: .timer)
                 .font(.title2)
                 .foregroundColor(.cyan)
                 .multilineTextAlignment(.center)
+                .padding()
         }
         .onReceive(shift.$sharedShift){ _ in
             fraction = 1 / Float(shift.sharedShift)

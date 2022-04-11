@@ -85,6 +85,7 @@ struct ContentView: View {
                 Spacer()
                 //Since the Applicaiton doesn't exist in the dock, a quit button will be loaded at the bottom so the user can close it at any time
                 QuitButton()
+                    .padding(.trailing)
                 #endif
             }
         }

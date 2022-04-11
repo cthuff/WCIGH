@@ -21,8 +21,6 @@ struct Lunch: View {
                 Text("Minutes").tag(2)
             }
             .padding(.horizontal)
-            
-            .padding(.bottom)
             .pickerStyle(.segmented)
             #if !os(macOS)
             .frame(maxWidth: UIScreen.main.bounds.size.width / 1.25)
@@ -30,12 +28,7 @@ struct Lunch: View {
             #endif
             .onChange(of: lunchPicker){ _ in
                 withAnimation(Animation.easeInOut(duration: 0.25)) {
-                    switch lunchPicker {
-                    case 1:
-                        !showPicker ? showPicker.toggle() : nil
-                    default:
-                        showPicker ? showPicker.toggle() : nil
-                    }
+                    showPicker.toggle()
                 }
             }
             if (showPicker){
@@ -52,6 +45,8 @@ struct Lunch_Previews: PreviewProvider {
     
     static let shift = Shift()
     static var previews: some View {
-        Lunch().environmentObject(shift)
+        Group {
+            Lunch().environmentObject(shift)
+        }
     }
 }
