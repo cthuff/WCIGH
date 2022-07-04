@@ -36,5 +36,113 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37D6C361-19BE-4F69-A21D-9D425FF2A20A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/Model/Shift.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "Shift"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "37D6C361-19BE-4F69-A21D-9D425FF2A20A - 3f9b3783142f40aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Tempus.Shift.sharedShift : Swift.Int"
+                  moduleName = "Tempus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craig/Documents/Apps/Tempus/Shared/Model/Shift.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "37D6C361-19BE-4F69-A21D-9D425FF2A20A - 51aff245f2ea885c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tempus.Shift.sharedShift.getter : Swift.Int"
+                  moduleName = "Tempus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craig/Documents/Apps/Tempus/Shared/Model/Shift.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "37D6C361-19BE-4F69-A21D-9D425FF2A20A - a902e882cf2bf450"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tempus.Shift.sharedShift.setter : Swift.Int"
+                  moduleName = "Tempus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craig/Documents/Apps/Tempus/Shared/Model/Shift.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "37D6C361-19BE-4F69-A21D-9D425FF2A20A - 2f374d2d6f8ee579"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tempus.Shift.$sharedShift.getter : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "Tempus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craig/Documents/Apps/Tempus/Shared/Model/Shift.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "37D6C361-19BE-4F69-A21D-9D425FF2A20A - 64d2d81c58a1250d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tempus.Shift.$sharedShift.setter : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "Tempus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craig/Documents/Apps/Tempus/Shared/Model/Shift.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "37D6C361-19BE-4F69-A21D-9D425FF2A20A - 2fda9da58f533f3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tempus.Shift.init(session: __C.WCSession) -&gt; Tempus.Shift"
+                  moduleName = "Tempus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craig/Documents/Apps/Tempus/Shared/Model/Shift.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1530">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

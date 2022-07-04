@@ -22,16 +22,17 @@ struct GoHomeButton: View {
                 }
             }) {
                 Text("Can I Go Home?")
-                    .foregroundColor(Color("TextColor"))
+//                    .foregroundColor(Color("TextColor"))
             }
             .buttonStyle(.borderedProminent)
-            .tint(.primary)
+//            .tint(.primary)
             .alert("Get out of here!" , isPresented: $goHome) {
-                Button("Dismiss", role: .cancel) { }
+                Button("Dismiss", role: .none) { }
             }
             .alert("Sorry, you're stuck here", isPresented: $stayHere) {
                 Button("Dismiss", role: .cancel) { }
             }
+            .badge(1)
             
         }
     }

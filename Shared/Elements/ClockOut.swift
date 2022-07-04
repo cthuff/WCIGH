@@ -14,7 +14,7 @@ struct ClockOut: View {
         HStack{
             Text("Clock Out At:")
                 .bold()
-            Text(shift.clockOut(), format: .dateTime.minute().hour())
+            Text(shift.clockOut, format: .dateTime.minute().hour())
                 .foregroundColor(.purple)
         }
         .font(.title2)

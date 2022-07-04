@@ -54,7 +54,7 @@ struct ContentView: View {
                     Text("\(timeString(timeRemaining))")
                         .foregroundColor(.cyan)
                     //Since shift.remaining returns a value, each time it changes, we want the timeRemaining to match that value 
-                        .onChange(of: shift.remaining()) { _ in
+                        .onChange(of: shift.timeRemaining) { _ in
                             timeRemaining = shift.timeRemaining
                         }
                     .padding(.top, 1)
