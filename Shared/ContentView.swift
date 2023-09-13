@@ -54,9 +54,10 @@ struct ContentView: View {
                     Text("\(timeString(timeRemaining))")
                         .foregroundColor(.cyan)
                     //Since shift.remaining returns a value, each time it changes, we want the timeRemaining to match that value 
-                        .onChange(of: shift.timeRemaining) { _ in
-                            timeRemaining = shift.timeRemaining
-                        }
+                        .onChange(of: shift.timeRemaining, {timeRemaining = shift.timeRemaining})
+//                        .onChange(of: shift.timeRemaining) { _ in
+//                            timeRemaining = shift.timeRemaining
+//                        }
                     .padding(.top, 1)
                 }
                 .font(.title2)
@@ -101,11 +102,15 @@ struct ContentView: View {
         }
         //Update the widget when the app is being closed out on iOS. Prevents unecessary background updates.
         //Note: There is a slight delay in the update and the Widget loading the data that looks a little funky, but doesn't effect usability
-        .onChange(of: scenePhase) { newPhase in
-            if newPhase == .background {
-                WidgetCenter.shared.reloadAllTimelines()
-            }
-        }
+        .onChange(of: shift.endTime, { WidgetCenter.shared.reloadAllTimelines()})
+        .onChange(of: scenePhase, { if scenePhase == .background {
+            WidgetCenter.shared.reloadAllTimelines()
+        }})
+//        .onChange(of: scenePhase) {
+//            if scenePhase == .background {
+//                WidgetCenter.shared.reloadAllTimelines()
+//            }
+//        }
     }
     //Accepts an integer of time in seconds that will be convereted into a time string that is displayed in the text field
     func timeString(_ time: Int) -> String {

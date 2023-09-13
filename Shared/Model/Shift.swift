@@ -100,13 +100,15 @@ final class Shift: ObservableObject {
     //Handles sending the updated data to the watch when the start time, lunch length, or work length change
     //This way all of the data is handled by the shift class and we don't need hella environment variables
 //    func sendToWatch(updatedValue: [String : Int]) {
-#if !os(macOS)
+#if os(iOS)
     func sendToWatch() {
-        sharedShift = Int(workLengthInMinutes + lunchInMinutes)
-        do {
-            try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "workLength" : self.workLength, "startTime" : self.startTime])
-        } catch {
-            print("whoops")
+        if (self.session.isPaired) {
+            sharedShift = Int(workLengthInMinutes + lunchInMinutes)
+            do {
+                try self.session.updateApplicationContext(["sharedShift" : sharedShift, "lunchLength" : self.lunchLength, "workLength" : self.workLength, "startTime" : self.startTime])
+            } catch {
+                print("Watch Unreachable")
+            }
         }
     }
 #endif
