@@ -19,7 +19,7 @@ struct InfoView: View {
                 .lineLimit(nil)
             Link("Personal Website", destination: URL(string: "https://craighuff.com")!)
                 .foregroundColor(.blue)
-            Text("A special thank you to Paul Hudson for the SwiftUI Tutorials  that this app was built upon")
+            Text("A special thank you to Paul Hudson for the SwiftUI Tutorials that this app was built upon")
                 .lineLimit(nil)
                 .padding()
             Link("Learn SwiftUI", destination: URL(string: "https://www.hackingwithswift.com/quick-start/swiftui")!)

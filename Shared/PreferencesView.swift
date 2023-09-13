@@ -17,14 +17,14 @@ struct PreferencesView: View {
                 ב״ה()
             }
             HStack{
-                Text("Average Lunch Length:")
+                Text("Default Lunch Length:")
                 TextField("0", text: $shift.lunchLength)
                     .frame(width: 35)
                     .padding(.leading)
                 Text("minutes")
             }
             HStack{
-                Text("Average Shift Length:")
+                Text("Default Shift Length:")
                 TextField("0", text: $shift.workLength)
                     .frame(width: 35)
                     .padding(.leading)
