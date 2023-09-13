@@ -32,13 +32,13 @@ struct LunchBlocks: View {
                 lunchEnd = lunchStart.advanced(by: shift.lunchInMinutes)
             }
         //Watches both lunch values in case the user doesn't edit one or the other
-        }.onChange(of: lunchEnd) { _ in
+        }.onChange(of: lunchEnd, {
             shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
-        }
-        .onChange(of: lunchStart) { _ in
+        })
+        .onChange(of: lunchStart, {
             shift.lunchLength = "\(Int(lunchStart.distance(to: lunchEnd) / 60))"
             lunchEnd = lunchStart.advanced(by: shift.lunchInMinutes)
-        }
+        })
     }
 }
 

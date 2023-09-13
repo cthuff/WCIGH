@@ -48,6 +48,13 @@
 		44A8862C279894830070DF30 /* WidgitExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44A88621279894820070DF30 /* WidgitExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		44B287BE27B1EAE00064F350 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B287BD27B1EAE00064F350 /* InfoView.swift */; };
 		44B287BF27B1EAE00064F350 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B287BD27B1EAE00064F350 /* InfoView.swift */; };
+		44B6C0AB2A30DEDF007A5299 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C52798808B00A3F5A7 /* WidgetKit.framework */; };
+		44B6C0AC2A30DEDF007A5299 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461F1C72798808B00A3F5A7 /* SwiftUI.framework */; };
+		44B6C0AF2A30DEDF007A5299 /* macOS_WidgitBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B6C0AE2A30DEDF007A5299 /* macOS_WidgitBundle.swift */; };
+		44B6C0B12A30DEDF007A5299 /* macOS_Widgit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B6C0B02A30DEDF007A5299 /* macOS_Widgit.swift */; };
+		44B6C0B32A30DEE1007A5299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B6C0B22A30DEE1007A5299 /* Assets.xcassets */; };
+		44B6C0B82A30DEE1007A5299 /* macOS WidgitExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 44B6C0AA2A30DEDE007A5299 /* macOS WidgitExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		44B6C0BD2A30E455007A5299 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F27DE2790C34C002622F1 /* Shift.swift */; };
 		44BCED592790EEDF00EB1D17 /* ClockIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED582790EEDF00EB1D17 /* ClockIn.swift */; };
 		44BCED5B2790EF4500EB1D17 /* LunchMinutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5A2790EF4500EB1D17 /* LunchMinutes.swift */; };
 		44BCED5D2790EF9C00EB1D17 /* ShiftLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */; };
@@ -77,6 +84,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 44A88620279894820070DF30;
 			remoteInfo = WidgitExtension;
+		};
+		44B6C0B62A30DEE1007A5299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 440F27B8278FA151002622F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44B6C0A92A30DEDE007A5299;
+			remoteInfo = "macOS WidgitExtension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -114,6 +128,17 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44B6C0BC2A30DEE2007A5299 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				44B6C0B82A30DEE1007A5299 /* macOS WidgitExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +173,12 @@
 		44A88627279894830070DF30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A88629279894830070DF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44B287BD27B1EAE00064F350 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		44B6C0AA2A30DEDE007A5299 /* macOS WidgitExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "macOS WidgitExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B6C0AE2A30DEDF007A5299 /* macOS_WidgitBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOS_WidgitBundle.swift; sourceTree = "<group>"; };
+		44B6C0B02A30DEDF007A5299 /* macOS_Widgit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOS_Widgit.swift; sourceTree = "<group>"; };
+		44B6C0B22A30DEE1007A5299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44B6C0B42A30DEE1007A5299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B6C0B52A30DEE1007A5299 /* macOS_Widgit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_Widgit.entitlements; sourceTree = "<group>"; };
 		44BCED582790EEDF00EB1D17 /* ClockIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockIn.swift; sourceTree = "<group>"; };
 		44BCED5A2790EF4500EB1D17 /* LunchMinutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchMinutes.swift; sourceTree = "<group>"; };
 		44BCED5C2790EF9C00EB1D17 /* ShiftLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLength.swift; sourceTree = "<group>"; };
@@ -187,6 +218,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44B6C0A72A30DEDE007A5299 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B6C0AC2A30DEDF007A5299 /* SwiftUI.framework in Frameworks */,
+				44B6C0AB2A30DEDF007A5299 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -199,6 +239,7 @@
 				44A88624279894820070DF30 /* Widgit */,
 				44A1D51827A1B881003BB79D /* WatchApp */,
 				44A1D52327A1B883003BB79D /* WatchApp WatchKit Extension */,
+				44B6C0AD2A30DEDF007A5299 /* macOS Widgit */,
 				4461F1C42798808B00A3F5A7 /* Frameworks */,
 				440F27C5278FA153002622F1 /* Products */,
 			);
@@ -226,6 +267,7 @@
 				44A88621279894820070DF30 /* WidgitExtension.appex */,
 				44A1D51727A1B881003BB79D /* Watch App.app */,
 				44A1D51F27A1B883003BB79D /* WatchApp WatchKit Extension.appex */,
+				44B6C0AA2A30DEDE007A5299 /* macOS WidgitExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -313,6 +355,18 @@
 			path = Widgit;
 			sourceTree = "<group>";
 		};
+		44B6C0AD2A30DEDF007A5299 /* macOS Widgit */ = {
+			isa = PBXGroup;
+			children = (
+				44B6C0AE2A30DEDF007A5299 /* macOS_WidgitBundle.swift */,
+				44B6C0B02A30DEDF007A5299 /* macOS_Widgit.swift */,
+				44B6C0B22A30DEE1007A5299 /* Assets.xcassets */,
+				44B6C0B42A30DEE1007A5299 /* Info.plist */,
+				44B6C0B52A30DEE1007A5299 /* macOS_Widgit.entitlements */,
+			);
+			path = "macOS Widgit";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,10 +398,12 @@
 				440F27C6278FA153002622F1 /* Sources */,
 				440F27C7278FA153002622F1 /* Frameworks */,
 				440F27C8278FA153002622F1 /* Resources */,
+				44B6C0BC2A30DEE2007A5299 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				44B6C0B72A30DEE1007A5299 /* PBXTargetDependency */,
 			);
 			name = "Tempus (macOS)";
 			productName = "Tempus (macOS)";
@@ -405,6 +461,23 @@
 			productReference = 44A88621279894820070DF30 /* WidgitExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		44B6C0A92A30DEDE007A5299 /* macOS WidgitExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44B6C0B92A30DEE2007A5299 /* Build configuration list for PBXNativeTarget "macOS WidgitExtension" */;
+			buildPhases = (
+				44B6C0A62A30DEDE007A5299 /* Sources */,
+				44B6C0A72A30DEDE007A5299 /* Frameworks */,
+				44B6C0A82A30DEDE007A5299 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "macOS WidgitExtension";
+			productName = "macOS WidgitExtension";
+			productReference = 44B6C0AA2A30DEDE007A5299 /* macOS WidgitExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -415,7 +488,7 @@
 				KnownAssetTags = (
 					New,
 				);
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					440F27C3278FA153002622F1 = {
@@ -432,6 +505,9 @@
 					};
 					44A88620279894820070DF30 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					44B6C0A92A30DEDE007A5299 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -451,6 +527,7 @@
 				440F27C3278FA153002622F1 /* Tempus (iOS) */,
 				440F27C9278FA153002622F1 /* Tempus (macOS) */,
 				44A88620279894820070DF30 /* WidgitExtension */,
+				44B6C0A92A30DEDE007A5299 /* macOS WidgitExtension */,
 				44A1D51627A1B881003BB79D /* WatchApp */,
 				44A1D51E27A1B883003BB79D /* WatchApp WatchKit Extension */,
 			);
@@ -496,6 +573,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				44A88628279894830070DF30 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B6C0A82A30DEDE007A5299 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B6C0B32A30DEE1007A5299 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +651,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44B6C0A62A30DEDE007A5299 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B6C0AF2A30DEDF007A5299 /* macOS_WidgitBundle.swift in Sources */,
+				44B6C0BD2A30E455007A5299 /* Shift.swift in Sources */,
+				44B6C0B12A30DEDF007A5299 /* macOS_Widgit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -583,6 +678,11 @@
 			isa = PBXTargetDependency;
 			target = 44A88620279894820070DF30 /* WidgitExtension */;
 			targetProxy = 44A8862A279894830070DF30 /* PBXContainerItemProxy */;
+		};
+		44B6C0B72A30DEE1007A5299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44B6C0A92A30DEDE007A5299 /* macOS WidgitExtension */;
+			targetProxy = 44B6C0B62A30DEE1007A5299 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -638,8 +738,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -693,8 +793,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -721,7 +821,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -755,7 +855,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -774,6 +874,7 @@
 		440F27D9278FA153002622F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "macOS App Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
@@ -792,7 +893,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
@@ -806,6 +907,7 @@
 		440F27DA278FA153002622F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "macOS App Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
@@ -824,7 +926,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
@@ -966,13 +1068,13 @@
 				INFOPLIST_FILE = Widgit/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Widgit;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.Widgit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -996,13 +1098,13 @@
 				INFOPLIST_FILE = Widgit/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Widgit;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.Widgit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1011,6 +1113,97 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44B6C0BA2A30DEE2007A5299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "macOS Widgit/macOS_Widgit.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK5UZ58Q86;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS Widgit/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "macOS Widgit";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sports.Tempus.macOS-Widgit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44B6C0BB2A30DEE2007A5299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "macOS Widgit/macOS_Widgit.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK5UZ58Q86;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS Widgit/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "macOS Widgit";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sports.Tempus.macOS-Widgit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1067,6 +1260,15 @@
 			buildConfigurations = (
 				44A8862E279894830070DF30 /* Debug */,
 				44A8862F279894830070DF30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44B6C0B92A30DEE2007A5299 /* Build configuration list for PBXNativeTarget "macOS WidgitExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44B6C0BA2A30DEE2007A5299 /* Debug */,
+				44B6C0BB2A30DEE2007A5299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

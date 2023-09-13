@@ -24,13 +24,13 @@ struct Lunch: View {
             .pickerStyle(.segmented)
             #if !os(macOS)
             .frame(maxWidth: UIScreen.main.bounds.size.width / 1.25)
-            .onChange(of: shift.lunchLength, perform: {_ in shift.sendToWatch()})
+            .onChange(of: shift.lunchLength, { shift.sendToWatch()})
             #endif
-            .onChange(of: lunchPicker){ _ in
+            .onChange(of: lunchPicker, {
                 withAnimation(Animation.easeInOut(duration: 0.25)) {
                     showPicker.toggle()
                 }
-            }
+            })
             if (showPicker){
                 LunchBlocks()
             }

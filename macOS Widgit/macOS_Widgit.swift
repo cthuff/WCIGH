@@ -1,8 +1,8 @@
 //
-//  Widgit.swift
-//  Widgit
+//  macOS_Widgit.swift
+//  macOS Widgit
 //
-//  Created by Craig on 1/19/22.
+//  Created by Craig on 6/7/23.
 //
 
 import WidgetKit
@@ -32,9 +32,9 @@ struct SimpleEntry: TimelineEntry {
     var shift: Shift
 }
 
-struct WidgitEntryView : View {
+struct macOS_WidgitEntryView : View {
     var entry: Provider.Entry
-    
+
     var body: some View {
         VStack(){
             Text("Shift Remaining:")
@@ -45,28 +45,34 @@ struct WidgitEntryView : View {
                 .multilineTextAlignment(.center)
                 .padding(.top, 1)
         }
-        .containerBackground(for: .widget){
-            Color.clear
-        }
+        .containerBackground(.fill.tertiary, for: .widget)
     }
 }
 
-@main
-struct Widgit: Widget {
-    let kind: String = "Widget"
+
+struct macOS_Widgit: Widget {
+    let kind: String = "macOS_Widgit"
+
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            WidgitEntryView(entry: entry)
+            macOS_WidgitEntryView(entry: entry)
         }
-        .configurationDisplayName("Clockout Widget")
-        .description("Keep an eye on when you can clock out")
+        .configurationDisplayName("My Widget")
+        .description("This is an example widget.")
     }
 }
 
-struct Widgit_Previews: PreviewProvider {
+struct macOS_Widgit_Previews: PreviewProvider {
     static let shift = Shift()
     static var previews: some View {
-        WidgitEntryView(entry: SimpleEntry(date: Date(), shift: shift))
+        macOS_WidgitEntryView(entry: SimpleEntry(date: Date(), shift: shift))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
+}
+
+#Preview(as: .systemSmall) {
+    macOS_Widgit()
+} timeline: {
+    SimpleEntry(date: .now, shift: Shift())
+
 }
