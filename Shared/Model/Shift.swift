@@ -40,7 +40,7 @@ final class Shift: ObservableObject {
             .assign(to: &$sharedShift)
     }
 #endif
-    ///MARK: Dynamic Variables
+    //MARK: Dynamic Variables
 
     var lunchInMinutes: Double {
         return (Double(lunchLength) ?? 30) * 60
