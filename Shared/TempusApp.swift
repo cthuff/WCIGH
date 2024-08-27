@@ -18,10 +18,11 @@ struct TempusApp: App {
         MenuBarExtra("UtilityApp", systemImage: "clock.badge.checkmark") {
             ContentView().environmentObject(TempusApp.shift)
                }.menuBarExtraStyle(.window)
-        #endif
+        #else
         WindowGroup {
-//            ContentView().environmentObject(TempusApp.shift)
+            ContentView().environmentObject(TempusApp.shift)
         }
+        #endif
     }
 
 }

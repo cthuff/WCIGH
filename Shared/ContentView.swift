@@ -106,11 +106,6 @@ struct ContentView: View {
         .onChange(of: scenePhase, { if scenePhase == .background {
             WidgetCenter.shared.reloadAllTimelines()
         }})
-//        .onChange(of: scenePhase) {
-//            if scenePhase == .background {
-//                WidgetCenter.shared.reloadAllTimelines()
-//            }
-//        }
     }
     //Accepts an integer of time in seconds that will be convereted into a time string that is displayed in the text field
     func timeString(_ time: Int) -> String {
@@ -118,8 +113,9 @@ struct ContentView: View {
         let hours   = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
+//        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
         let result = String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-        return hours > 0 ? result : "0:00"
+        return ( seconds >= 0 || minutes > 0 ) ? result : "00:00:00"
     }
 }
 
