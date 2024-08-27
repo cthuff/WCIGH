@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.sports.Tempus</string>
+		<string>group.com.sports-warehouse.Tempus</string>
 	</array>
 </dict>
 </plist>

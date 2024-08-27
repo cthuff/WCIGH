@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,7 +17,7 @@
                BlueprintIdentifier = "440F27C9278FA153002622F1"
                BuildableName = "Tempus.app"
                BlueprintName = "Tempus (macOS)"
-               ReferencedContainer = "container:Tempus.xcodeproj">
+               ReferencedContainer = "container:Tempus App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "440F27C9278FA153002622F1"
             BuildableName = "Tempus.app"
             BlueprintName = "Tempus (macOS)"
-            ReferencedContainer = "container:Tempus.xcodeproj">
+            ReferencedContainer = "container:Tempus App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "440F27C9278FA153002622F1"
             BuildableName = "Tempus.app"
             BlueprintName = "Tempus (macOS)"
-            ReferencedContainer = "container:Tempus.xcodeproj">
+            ReferencedContainer = "container:Tempus App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
