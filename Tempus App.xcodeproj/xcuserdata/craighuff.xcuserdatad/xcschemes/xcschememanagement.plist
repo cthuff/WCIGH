@@ -27,40 +27,12 @@
 		<key>WidgitExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
 		<key>macOS WidgitExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>440F27C3278FA153002622F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>440F27C9278FA153002622F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4418BB062799D01800B5C3D6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4461F1C22798808B00A3F5A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44A8860C2798931D0070DF30</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<integer>4</integer>
 		</dict>
 	</dict>
 </dict>

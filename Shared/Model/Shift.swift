@@ -15,9 +15,9 @@ import SwiftUI
 final class Shift: ObservableObject {
     
     @Published var start = Calendar.current.date(from: DateComponents(hour: 8))!
-    @AppStorage("startTime", store: UserDefaults(suiteName: "group.com.sports.Tempus")) var startTime = 28800
-    @AppStorage("lunchLength", store: UserDefaults(suiteName: "group.com.sports.Tempus")) var lunchLength = ""
-    @AppStorage("workLength", store: UserDefaults(suiteName: "group.com.sports.Tempus")) var workLength = ""
+    @AppStorage("startTime", store: UserDefaults(suiteName: "group.com.sports-warehouse.Tempus")) var startTime = 28800
+    @AppStorage("lunchLength", store: UserDefaults(suiteName: "group.com.sports-warehouse.Tempus")) var lunchLength = ""
+    @AppStorage("workLength", store: UserDefaults(suiteName: "group.com.sports-warehouse.Tempus")) var workLength = ""
     
     var endTime = Date()
 #if !os(macOS)
@@ -40,7 +40,7 @@ final class Shift: ObservableObject {
             .assign(to: &$sharedShift)
     }
 #endif
-    ///MARK: Dynamic Variables
+    //MARK: Dynamic Variables
 
     var lunchInMinutes: Double {
         return (Double(lunchLength) ?? 30) * 60
