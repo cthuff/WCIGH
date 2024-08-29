@@ -12,7 +12,7 @@ struct InfoView: View {
         VStack{
             HStack{
                 Spacer()
-            ב״ה()
+                ב״ה()
             }
             Text("Designed by Craig Huff and Samantha Rosas")
                 .padding()
@@ -24,6 +24,14 @@ struct InfoView: View {
                 .padding()
             Link("Learn SwiftUI", destination: URL(string: "https://www.hackingwithswift.com/quick-start/swiftui")!)
                 .foregroundColor(.blue)
+            HStack{
+                Text("Version: ").bold()
+                Text(Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String )
+                Text("/").padding(.horizontal, 10)
+                Text("Build: ")
+                    .bold()
+                Text(Bundle.main.infoDictionary!["CFBundleVersion"] as! String )
+            }.padding(.top, 25)
         }
         .lineLimit(nil)
     }
@@ -34,3 +42,4 @@ struct InfoView_Previews: PreviewProvider {
         InfoView()
     }
 }
+

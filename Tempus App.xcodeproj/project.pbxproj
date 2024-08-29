@@ -62,6 +62,8 @@
 		44BCED632790FAB600EB1D17 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BCED622790FAB600EB1D17 /* Lunch.swift */; };
 		622D299C2C35A84A004E563E /* MSLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D299B2C35A83C004E563E /* MSLoginButton.swift */; };
 		622D299D2C35A84A004E563E /* MSLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D299B2C35A83C004E563E /* MSLoginButton.swift */; };
+		6258A2832C7E684600104963 /* SecretButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258A2822C7E684600104963 /* SecretButton.swift */; };
+		6258A2842C7E684600104963 /* SecretButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258A2822C7E684600104963 /* SecretButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,7 @@
 		44BCED602790F0C000EB1D17 /* LunchBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchBlocks.swift; sourceTree = "<group>"; };
 		44BCED622790FAB600EB1D17 /* Lunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch.swift; sourceTree = "<group>"; };
 		622D299B2C35A83C004E563E /* MSLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSLoginButton.swift; sourceTree = "<group>"; };
+		6258A2822C7E684600104963 /* SecretButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +239,7 @@
 				440F27BE278FA151002622F1 /* ContentView.swift */,
 				44B287BD27B1EAE00064F350 /* InfoView.swift */,
 				44128ACB279792A600CE9A57 /* PreferencesView.swift */,
+				6258A2822C7E684600104963 /* SecretButton.swift */,
 				448FE0932791E57300CD9127 /* Elements */,
 				448FE0922791E55900CD9127 /* Model */,
 			);
@@ -561,6 +565,7 @@
 				445F2EDE27A85F3100CA5C37 /* SessionDelegator.swift in Sources */,
 				44BCED632790FAB600EB1D17 /* Lunch.swift in Sources */,
 				44BCED5D2790EF9C00EB1D17 /* ShiftLength.swift in Sources */,
+				6258A2842C7E684600104963 /* SecretButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +588,7 @@
 				448FE08E2791E04000CD9127 /* LunchMinutes.swift in Sources */,
 				440F27CE278FA153002622F1 /* TempusApp.swift in Sources */,
 				44128ACD279792A600CE9A57 /* PreferencesView.swift in Sources */,
+				6258A2832C7E684600104963 /* SecretButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,7 +769,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tempus (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -780,7 +786,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				SDKROOT = iphoneos;
@@ -797,7 +803,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tempus (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -814,7 +820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				SDKROOT = iphoneos;
@@ -835,7 +841,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -850,7 +856,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -870,7 +876,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -885,7 +891,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus;
 				PRODUCT_NAME = Tempus;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -904,19 +910,20 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "WatchApp WatchKit Extension/WatchApp WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tempus;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Watch_App.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.sports.Tempus;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.watchkitapp;
 				PRODUCT_NAME = "Watch App";
 				SDKROOT = watchos;
@@ -937,19 +944,20 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "WatchApp WatchKit Extension/WatchApp WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tempus;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Watch_App.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.sports.Tempus;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.watchkitapp;
 				PRODUCT_NAME = "Watch App";
 				SDKROOT = watchos;
@@ -969,7 +977,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgitExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgit/Info.plist;
@@ -981,7 +989,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.Widgit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -999,7 +1007,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgitExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgit/Info.plist;
@@ -1011,7 +1019,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sports.Tempus.Widgit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1034,7 +1042,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1058,7 +1066,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sports.Tempus.macOS-Widgit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1082,7 +1090,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240827;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = BQX32RMWCF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1106,7 +1114,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sports.Tempus.macOS-Widgit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
